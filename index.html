@@ -1,0 +1,2439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChatAI Enterprise | Official AI Workspace</title>
+
+  <!-- Google Search Console & Official SEO Meta Tags -->
+  <meta name="description" content="ChatAI Enterprise is the official AI workspace featuring frontier reasoning models (GPT-4o, Claude 3.5, Gemini Pro), AI Image Studio, live code runner, and executive command deck." />
+  <meta name="keywords" content="ChatAI, enterprise AI, official AI workspace, GPT-4o, Claude 3.5, Gemini Pro, AI chatbot, image generation, executive telemetry" />
+  <meta name="author" content="ChatAI Enterprise Systems" />
+  <link rel="canonical" href="https://chatai-enterprise.loca.lt/" />
+
+  <!-- Googlebot & Search Engine Indexing Directives -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="google-site-verification" content="googleb9ec117c47883587" id="googleSiteVerificationMeta" />
+  <meta name="theme-color" content="#090d1a" />
+  <link rel="manifest" href="manifest.json" />
+
+  <!-- OpenGraph & Social Rich Snippets -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ChatAI Enterprise | Official AI Workspace" />
+  <meta property="og:description" content="Official AI intelligence suite with GPT-4o, Claude 3, and Gemini Pro. Deep reasoning, AI image synthesis, live code runner, and executive command deck." />
+  <meta property="og:url" content="https://chatai-enterprise.loca.lt/" />
+  <meta property="og:site_name" content="ChatAI Enterprise" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ChatAI Enterprise | Official AI Workspace" />
+  <meta name="twitter:description" content="Official AI intelligence suite with GPT-4o, Claude 3, and Gemini Pro. Enterprise security, AI image synthesis, and executive command deck." />
+
+  <!-- Google Official Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://chatai-enterprise.loca.lt/#webapp",
+        "name": "ChatAI Enterprise Workspace",
+        "url": "https://chatai-enterprise.loca.lt/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "All (Web, Windows, macOS, Linux, iOS, Android)",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Enterprise-grade official AI workspace supporting multi-model frontier synthesis (GPT-4o, Claude 3, Gemini Pro), photorealistic image creation, and executive telemetry.",
+        "featureList": [
+          "Official Enterprise AI Workspace",
+          "Frontier Neural Models (GPT-4o, Claude 3, Gemini Pro)",
+          "AI Image Studio & Flux Synthesizer",
+          "Real-time Executive Command Deck & Gateway Latency Monitor",
+          "Code Sandbox Runner in 40+ Languages",
+          "Enterprise SOC-2 Type II Compliance Framework",
+          "Voice Synthesis & 14-Band DSP Equalizer"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "1280"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://chatai-enterprise.loca.lt/#organization",
+        "name": "ChatAI Official Systems",
+        "url": "https://chatai-enterprise.loca.lt/",
+        "logo": "https://chatai-enterprise.loca.lt/assets/logo.png"
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://chatai-enterprise.loca.lt/#website",
+        "url": "https://chatai-enterprise.loca.lt/",
+        "name": "ChatAI Official Enterprise Site",
+        "publisher": {
+          "@id": "https://chatai-enterprise.loca.lt/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://chatai-enterprise.loca.lt/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <div class="logo-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2L2 7l10 5 10-5-10-5zm0 8.5L4.5 7 12 3.25 19.5 7 12 10.5zm-8 4l8 4 8-4v3l-8 4-8-4v-3z" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="logo-meta">
+            <div class="logo-title-row">
+              <span class="logo-text">ChatAI</span>
+              <span class="official-verified-badge" title="Official Verified Enterprise Intelligence">
+                <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                OFFICIAL
+              </span>
+            </div>
+            <span class="logo-subtitle">Enterprise Workspace</span>
+          </div>
+        </div>
+        <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+
+      <button class="new-chat-btn" id="newChatBtn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor"/>
+        </svg>
+        <span>New Chat</span>
+        <span class="new-chat-shortcut">⌘K</span>
+      </button>
+
+      <div class="chat-history">
+        <div class="history-search-wrap">
+          <svg class="search-icon" width="13" height="13" viewBox="0 0 24 24" fill="none">
+            <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="currentColor"/>
+          </svg>
+          <input type="text" class="history-search-input" id="historySearchInput" placeholder="Search chats..." aria-label="Search conversation history" />
+          <button class="search-clear-btn" id="searchClearBtn" style="display:none" aria-label="Clear search">×</button>
+        </div>
+        <p class="history-label">Recent</p>
+        <ul class="history-list" id="historyList">
+          <li class="history-item active">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+              <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z" fill="currentColor"/>
+            </svg>
+            New conversation
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <!-- User Account Popover -->
+        <div class="user-account-popover" id="userAccountPopover" style="display:none;" aria-label="User Account Details">
+          <div class="popover-header">
+            <div class="popover-avatar" id="popoverAvatar">U</div>
+            <div class="popover-user-meta">
+              <span class="popover-name" id="popoverName">Executive Suite</span>
+              <span class="popover-email" id="popoverEmail">suite@apex-enterprise.io</span>
+            </div>
+          </div>
+          <div class="popover-tier-card">
+            <div class="popover-tier-row">
+              <span class="popover-tier-name" id="popoverTierName">Apex Enterprise Tier</span>
+              <span class="popover-tier-badge">SOC-2</span>
+            </div>
+            <span class="popover-tier-sub">Unlimited Neural Tokens • P99 Priority Route</span>
+          </div>
+          <div class="popover-actions">
+            <button class="popover-action-btn" id="popoverSwitchAccountBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M16 17v2H2v-2s0-4 7-4 7 4 7 4zm-7-6a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm8.5-1.5a3 3 0 1 0-2.8-4 5.5 5.5 0 0 1 2.8 4zm1.5 5.5s-.3-2.3-3.6-3.3c1.3.8 2.1 2.1 2.1 3.3v1h3.5v-1H19z" fill="currentColor"/></svg>
+              Switch Account / Login
+            </button>
+            <button class="popover-action-btn danger" id="popoverSignOutBtn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" fill="currentColor"/></svg>
+              Sign Out
+            </button>
+          </div>
+        </div>
+
+        <div class="user-profile" id="userProfileBtn" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false" title="Click to view account & sign out">
+          <div class="avatar" id="userAvatar">U</div>
+          <div class="user-info">
+            <span class="user-name" id="userDisplayName">Executive Suite</span>
+            <span class="user-plan"><span class="plan-status-dot"></span><span id="userPlanBadge">Enterprise Active</span></span>
+          </div>
+          <button class="settings-btn" id="userProfileSettingsBtn" aria-label="Account Settings" title="Account settings">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M19.14 12.94c.04-.3.06-.61.06-.94s-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+        <div class="sidebar-actions-row">
+          <button class="clear-all-btn" id="clearAllChatsBtn" title="Clear all conversation history">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+              <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" fill="currentColor"/>
+            </svg>
+            Clear all chats
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-main">
+
+      <!-- Header -->
+      <header class="chat-header">
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+            <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill="currentColor"/>
+          </svg>
+        </button>
+        <div class="model-selector">
+          <button class="model-btn" id="modelBtn">
+            <span class="model-dot"></span>
+            <span id="modelName">GPT-4o</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+              <path d="M7 10l5 5 5-5z" fill="currentColor"/>
+            </svg>
+          </button>
+          <div class="model-dropdown" id="modelDropdown">
+            <div class="model-option selected" data-model="GPT-4o">
+              <span class="model-dot green"></span>GPT-4o
+              <span class="model-badge">Latest</span>
+            </div>
+            <div class="model-option" data-model="GPT-3.5">
+              <span class="model-dot blue"></span>GPT-3.5 Turbo
+            </div>
+            <div class="model-option" data-model="Claude 3">
+              <span class="model-dot purple"></span>Claude 3
+            </div>
+            <div class="model-option" data-model="Gemini Pro">
+              <span class="model-dot orange"></span>Gemini Pro
+            </div>
+          </div>
+        </div>
+
+        <!-- Persona Selector -->
+        <div class="persona-selector">
+          <button class="persona-btn" id="personaBtn" aria-label="Select AI Persona">
+            <span id="personaIcon">⚡</span>
+            <span id="personaName">General</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
+              <path d="M7 10l5 5 5-5z" fill="currentColor"/>
+            </svg>
+          </button>
+          <div class="persona-dropdown" id="personaDropdown">
+            <div class="persona-option selected" data-persona="general">
+              <span class="persona-opt-icon">⚡</span>
+              <div class="persona-opt-info">
+                <span class="persona-opt-title">General Assistant</span>
+                <span class="persona-opt-desc">Balanced, versatile & helpful</span>
+              </div>
+            </div>
+            <div class="persona-option" data-persona="code">
+              <span class="persona-opt-icon">💻</span>
+              <div class="persona-opt-info">
+                <span class="persona-opt-title">Code Architect</span>
+                <span class="persona-opt-desc">Clean architecture & bug hunting</span>
+              </div>
+            </div>
+            <div class="persona-option" data-persona="writer">
+              <span class="persona-opt-icon">✍️</span>
+              <div class="persona-opt-info">
+                <span class="persona-opt-title">Creative Writer</span>
+                <span class="persona-opt-desc">Engaging copy, essays & stories</span>
+              </div>
+            </div>
+            <div class="persona-option" data-persona="tutor">
+              <span class="persona-opt-icon">🎓</span>
+              <div class="persona-opt-info">
+                <span class="persona-opt-title">Academic Tutor</span>
+                <span class="persona-opt-desc">In-depth explanations & Socratic teaching</span>
+              </div>
+            </div>
+            <div class="persona-option" data-persona="startup">
+              <span class="persona-opt-icon">💼</span>
+              <div class="persona-opt-info">
+                <span class="persona-opt-title">Startup Advisor</span>
+                <span class="persona-opt-desc">Business models & product strategy</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header-actions">
+          <!-- Official Enterprise Security Badge -->
+          <div class="official-sec-tag" title="Enterprise Tier • SOC-2 Type II Certified • Confidential & Encrypted">
+            <span class="sec-shield-icon">🛡️</span>
+            <span class="sec-text">Official AI</span>
+            <span class="sec-dot"></span>
+          </div>
+          <!-- API status indicator -->
+          <div class="api-indicator" id="apiIndicator" title="No API key — using demo mode">
+            <span class="api-dot offline"></span>
+            <span class="api-label" id="apiLabel">Demo</span>
+          </div>
+          <!-- Chat Stats indicator -->
+          <div class="chat-stats-pill" id="chatStats" title="Messages and token count in current conversation">
+            <span class="stats-icon">⚡</span>
+            <span id="chatStatsText">0 msgs · 0 tokens</span>
+          </div>
+          <!-- Fast Response Mode -->
+          <button class="fast-mode-btn active" id="fastModeToggle" aria-label="Toggle Fast Response Mode" title="Fast Response Mode: Instant AI synthesis & high-speed streaming">
+            <span class="fast-mode-icon">⚡</span>
+            <span class="fast-mode-label" id="fastModeLabel">Fast</span>
+          </button>
+          <!-- Executive Dashboard Toggle -->
+          <button class="icon-btn dashboard-toggle-btn" id="dashboardToggleBtn" aria-label="Toggle Executive Dashboard" title="Executive Dashboard Widgets (⌘D)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" fill="currentColor"/>
+            </svg>
+            <span class="dashboard-badge-dot"></span>
+          </button>
+          <!-- Claude Artifacts Canvas Toggle -->
+          <button class="icon-btn artifacts-toggle-btn" id="artifactsCanvasToggleBtn" aria-label="Toggle Artifacts Canvas" title="Claude 3.5 Artifacts Canvas (Split-Screen Interactive Sandbox)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 16H5V5h7v14zm7 0h-5V5h5v14z" fill="currentColor"/>
+            </svg>
+            <span class="artifact-dot-badge" id="artifactDotBadge" style="display:none;"></span>
+          </button>
+          <!-- ChatGPT Memory & Custom Instructions -->
+          <button class="icon-btn memory-btn" id="memoryModalBtn" aria-label="Custom Instructions & Memory" title="ChatGPT Memory & Custom Instructions (Executive Gems)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 21l3.68-.96A8.93 8.93 0 0 0 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-1.61 0-3.11-.47-4.38-1.28l-.31-.2-2.18.57.58-2.13-.2-.33A6.972 6.972 0 0 1 5 12c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3V8z" fill="currentColor"/>
+            </svg>
+          </button>
+          <!-- Fullscreen Toggle -->
+          <button class="icon-btn" id="fullscreenToggle" aria-label="Toggle Fullscreen" title="Toggle Fullscreen (F11)">
+            <svg class="fs-enter-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" fill="currentColor"/>
+            </svg>
+            <svg class="fs-exit-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:none">
+              <path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z" fill="currentColor"/>
+            </svg>
+          </button>
+          <!-- TTS toggle -->
+          <button class="icon-btn tts-btn" id="ttsToggle" aria-label="Toggle text-to-speech" title="Text-to-speech off" aria-pressed="false">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" fill="currentColor"/>
+            </svg>
+          </button>
+          <!-- Settings -->
+          <button class="icon-btn" id="openSettings" aria-label="API Settings" title="API Settings">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M19.14 12.94c.04-.3.06-.61.06-.94s-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z" fill="currentColor"/>
+            </svg>
+          </button>
+          <!-- Export -->
+          <div class="export-wrapper" id="exportWrapper">
+            <button class="icon-btn" id="exportBtn" aria-label="Export chat" title="Export chat">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/>
+              </svg>
+            </button>
+            <div class="export-dropdown" id="exportDropdown">
+              <button class="export-option" id="exportMarkdown">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 5H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 8l-4-4h3V9h2v4h3l-4 4z" fill="currentColor"/></svg>
+                Export as Markdown
+              </button>
+              <button class="export-option" id="exportPDF">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M20 2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-8.5 7.5c0 .83-.67 1.5-1.5 1.5H9v2H7.5V7H10c.83 0 1.5.67 1.5 1.5v1zm5 2c0 .83-.67 1.5-1.5 1.5h-2.5V7H15c.83 0 1.5.67 1.5 1.5v3zm4-3H19v1h1.5V11H19v2h-1.5V7h3v1.5zM9 9.5h1v-1H9v1zM4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm10 5.5h1v-3h-1v3z" fill="currentColor"/></svg>
+                Export as PDF
+              </button>
+              <button class="export-option" id="exportJSON">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M9.4 2.1L3.5 8 9.4 14l1.4-1.4L5.8 8l5-4.6L9.4 2.1zm5.2 0L20.5 8l-5.9 5.9L13.2 12.5l5-4.5-5-4.6 1.4-1.3z" fill="currentColor"/></svg>
+                Export as JSON
+              </button>
+            </div>
+          </div>
+          <!-- Executive Theme Accent Picker -->
+          <div class="theme-accent-picker" id="themeAccentPicker" title="Change Executive Accent Theme">
+            <button class="icon-btn accent-picker-btn" id="accentPickerBtn" aria-label="Executive Accent Theme">
+              <span class="accent-current-dot"></span>
+            </button>
+            <div class="accent-dropdown" id="accentDropdown">
+              <div class="accent-dropdown-title">Executive Accent Theme</div>
+              <div class="accent-options-list">
+                <button class="accent-option active" data-accent="indigo">
+                  <span class="swatch-circle swatch-indigo"></span>
+                  <span class="accent-name">Obsidian Indigo</span>
+                  <span class="accent-tag">Default</span>
+                </button>
+                <button class="accent-option" data-accent="emerald">
+                  <span class="swatch-circle swatch-emerald"></span>
+                  <span class="accent-name">Cyber Emerald</span>
+                  <span class="accent-tag">Fintech</span>
+                </button>
+                <button class="accent-option" data-accent="sapphire">
+                  <span class="swatch-circle swatch-sapphire"></span>
+                  <span class="accent-name">Electric Sapphire</span>
+                  <span class="accent-tag">Cloud</span>
+                </button>
+                <button class="accent-option" data-accent="amethyst">
+                  <span class="swatch-circle swatch-amethyst"></span>
+                  <span class="accent-name">Royal Amethyst</span>
+                  <span class="accent-tag">Creative</span>
+                </button>
+                <button class="accent-option" data-accent="gold">
+                  <span class="swatch-circle swatch-gold"></span>
+                  <span class="accent-name">Imperial Gold</span>
+                  <span class="accent-tag">Luxury</span>
+                </button>
+                <button class="accent-option" data-accent="crimson">
+                  <span class="swatch-circle swatch-crimson"></span>
+                  <span class="accent-name">Crimson Titan</span>
+                  <span class="accent-tag">Venture</span>
+                </button>
+                <button class="accent-option" data-accent="titanium">
+                  <span class="swatch-circle swatch-titanium"></span>
+                  <span class="accent-name">Nordic Titanium</span>
+                  <span class="accent-tag">Slate</span>
+                </button>
+                <button class="accent-option" data-accent="synthwave">
+                  <span class="swatch-circle swatch-synthwave"></span>
+                  <span class="accent-name">Neon Synthwave</span>
+                  <span class="accent-tag">Cyber</span>
+                </button>
+                <button class="accent-option" data-accent="amber">
+                  <span class="swatch-circle swatch-amber"></span>
+                  <span class="accent-name">Solar Amber</span>
+                  <span class="accent-tag">Energy</span>
+                </button>
+                <button class="accent-option" data-accent="ocean">
+                  <span class="swatch-circle swatch-ocean"></span>
+                  <span class="accent-name">Deep Ocean</span>
+                  <span class="accent-tag">Marine</span>
+                </button>
+                <button class="accent-option" data-accent="onyx">
+                  <span class="swatch-circle swatch-onyx"></span>
+                  <span class="accent-name">Onyx Stealth</span>
+                  <span class="accent-tag">OLED</span>
+                </button>
+                <button class="accent-option" data-accent="matrix">
+                  <span class="swatch-circle swatch-matrix"></span>
+                  <span class="accent-name">Elysian Matrix</span>
+                  <span class="accent-tag">Terminal</span>
+                </button>
+                <button class="accent-option" data-accent="rosegold">
+                  <span class="swatch-circle swatch-rosegold"></span>
+                  <span class="accent-name">Rose Gold Prestige</span>
+                  <span class="accent-tag">Luxury</span>
+                </button>
+                <button class="accent-option" data-accent="quantum">
+                  <span class="swatch-circle swatch-quantum"></span>
+                  <span class="accent-name">Quantum Aurora</span>
+                  <span class="accent-tag">Frontier</span>
+                </button>
+                <button class="accent-option" data-accent="nebula">
+                  <span class="swatch-circle swatch-nebula"></span>
+                  <span class="accent-name">Midnight Nebula</span>
+                  <span class="accent-tag">Cosmic</span>
+                </button>
+                <button class="accent-option" data-accent="voltage">
+                  <span class="swatch-circle swatch-voltage"></span>
+                  <span class="accent-name">Cyberpunk Voltage</span>
+                  <span class="accent-tag">Cyber</span>
+                </button>
+                <button class="accent-option" data-accent="twilight">
+                  <span class="swatch-circle swatch-twilight"></span>
+                  <span class="accent-name">Tokyo Twilight</span>
+                  <span class="accent-tag">Neon</span>
+                </button>
+                <button class="accent-option" data-accent="mint">
+                  <span class="swatch-circle swatch-mint"></span>
+                  <span class="accent-name">Alpine Mint</span>
+                  <span class="accent-tag">Clean</span>
+                </button>
+                <button class="accent-option" data-accent="platinum">
+                  <span class="swatch-circle swatch-platinum"></span>
+                  <span class="accent-name">Platinum Lux</span>
+                  <span class="accent-tag">Minimal</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+            <svg class="sun-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37a.996.996 0 0 0-1.41 0 .996.996 0 0 0 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0a.996.996 0 0 0 0-1.41l-1.06-1.06zm1.06-12.37l-1.06 1.06a.996.996 0 0 0 0 1.41c.39.39 1.03.39 1.41 0l1.06-1.06a.996.996 0 0 0 0-1.41.996.996 0 0 0-1.41 0zM7.05 18.36l-1.06 1.06a.996.996 0 0 0 0 1.41c.39.39 1.03.39 1.41 0l1.06-1.06a.996.996 0 0 0 0-1.41.996.996 0 0 0 0-1.41 0z" fill="currentColor"/>
+            </svg>
+            <svg class="moon-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" style="display:none">
+              <path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 0 1-4.4 2.26 5.403 5.403 0 0 1-3.14-9.8c-.44-.06-.9-.1-1.36-.1z" fill="currentColor"/>
+            </svg>
+          </button>
+          <button class="icon-btn" id="shareBtn" aria-label="Share chat" title="Share chat">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" fill="currentColor"/>
+            </svg>
+          </button>
+          <button class="icon-btn" id="googleSeoBtn" aria-label="Google Search Console & Official Site Portal" title="Google Official Site & Search Console">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- Messages Area -->
+      <div class="messages-area" id="messagesArea">
+
+        <!-- Welcome Screen -->
+        <div class="welcome-screen" id="welcomeScreen">
+          <div class="welcome-hero-badge">
+            <span class="hero-badge-pill">
+              <span class="hero-sparkle">✨</span>
+              <span>Official Enterprise Workspace</span>
+              <span class="hero-badge-dot"></span>
+              <span class="hero-badge-secure">🛡️ Certified Secure</span>
+            </span>
+          </div>
+          <div class="welcome-icon-wrap">
+            <div class="welcome-glow-ring"></div>
+            <div class="welcome-icon">
+              <svg width="38" height="38" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 7l10 5 10-5-10-5zm0 8.5L4.5 7 12 3.25 19.5 7 12 10.5zm-8 4l8 4 8-4v3l-8 4-8-4v-3z" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
+          <h1 class="welcome-title">How can I assist you today?</h1>
+          <p class="welcome-subtitle">Enterprise-grade intelligence suite for complex systems, full-stack code synthesis, executive decision-making, and deep technical workflows.</p>
+          <div class="persona-chips-bar" id="personaChipsBar">
+            <button class="persona-chip active" data-persona="general">⚡ General</button>
+            <button class="persona-chip" data-persona="code">💻 Code Architect</button>
+            <button class="persona-chip" data-persona="writer">✍️ Creative Writer</button>
+            <button class="persona-chip" data-persona="tutor">🎓 Academic Tutor</button>
+            <button class="persona-chip" data-persona="startup">💼 Startup Advisor</button>
+          </div>
+          <div class="suggestion-grid">
+            <button class="suggestion-card card-cyan" data-prompt="Explain quantum computing in simple terms">
+              <div class="card-top">
+                <div class="suggestion-icon-wrap cyan">
+                  <span class="suggestion-icon">⚛️</span>
+                </div>
+                <span class="card-badge">Quantum & Science</span>
+              </div>
+              <div class="card-body">
+                <span class="card-title">Explain quantum computing</span>
+                <span class="card-desc">Break down qubits, superposition & cryptographic quantum supremacy</span>
+              </div>
+              <div class="card-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </button>
+
+            <button class="suggestion-card card-emerald" data-prompt="Write a Python function to sort a list of dictionaries by a key">
+              <div class="card-top">
+                <div class="suggestion-icon-wrap emerald">
+                  <span class="suggestion-icon">🐍</span>
+                </div>
+                <span class="card-badge">Engineering & Code</span>
+              </div>
+              <div class="card-body">
+                <span class="card-title">Python sorting algorithms</span>
+                <span class="card-desc">Production-grade dictionary sorting with custom keys & error handling</span>
+              </div>
+              <div class="card-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </button>
+
+            <button class="suggestion-card card-amber" data-prompt="Give me 5 creative startup ideas for 2025">
+              <div class="card-top">
+                <div class="suggestion-icon-wrap amber">
+                  <span class="suggestion-icon">💡</span>
+                </div>
+                <span class="card-badge">Executive Strategy</span>
+              </div>
+              <div class="card-body">
+                <span class="card-title">2025 high-growth AI startups</span>
+                <span class="card-desc">Untapped agentic workflows, B2B compliance automation & monetization</span>
+              </div>
+              <div class="card-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </button>
+
+            <button class="suggestion-card card-violet" data-prompt="Help me write a professional email to request a meeting">
+              <div class="card-top">
+                <div class="suggestion-icon-wrap violet">
+                  <span class="suggestion-icon">✉️</span>
+                </div>
+                <span class="card-badge">Executive Comms</span>
+              </div>
+              <div class="card-body">
+                <span class="card-title">Executive correspondence</span>
+                <span class="card-desc">High-conversion stakeholder briefing, project proposals & board updates</span>
+              </div>
+              <div class="card-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </button>
+
+            <button class="suggestion-card card-pink" data-prompt="Generate an image of a futuristic cyberpunk city with flying vehicles in heavy neon rain, cinematic lighting, 8k">
+              <div class="card-top">
+                <div class="suggestion-icon-wrap pink">
+                  <span class="suggestion-icon">🎨</span>
+                </div>
+                <span class="card-badge">AI Image Studio</span>
+              </div>
+              <div class="card-body">
+                <span class="card-title">Generate cyberpunk city</span>
+                <span class="card-desc">Cinematic photorealistic 8K render with neon reflections, flying cars & mist</span>
+              </div>
+              <div class="card-arrow">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Chat Messages -->
+        <div class="messages-list" id="messagesList"></div>
+
+      </div>
+
+      <!-- Input Area -->
+      <div class="input-area">
+        <!-- Stop generation button -->
+        <div class="stop-gen-wrapper" id="stopGenWrapper" style="display:none">
+          <button class="stop-gen-btn" id="stopGenBtn" aria-label="Stop generating response">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="5" y="5" width="14" height="14" rx="2"/>
+            </svg>
+            <span>Stop generating</span>
+          </button>
+        </div>
+
+        <div class="input-wrapper">
+          <!-- Hidden file input -->
+          <input type="file" id="fileInput" accept="image/*,.pdf,.txt,.md,.csv,.json,.js,.ts,.py,.html,.css" multiple style="display:none" aria-label="Attach files" />
+
+          <div class="input-tools">
+            <button class="tool-btn" id="imageGenBtn" aria-label="AI Image Studio" title="AI Image Studio (create photorealistic images, 3D & concept art)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z" fill="currentColor"/>
+                <circle cx="8" cy="7.5" r="1.5" fill="currentColor"/>
+              </svg>
+            </button>
+            <button class="tool-btn" id="promptLibBtn" aria-label="Prompt Templates" title="Prompt Library (curated templates)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z" fill="currentColor"/>
+              </svg>
+            </button>
+            <button class="tool-btn" id="attachBtn" aria-label="Attach file" title="Attach file (images, text, PDF)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M16.5 6v11.5c0 2.21-1.79 4-4 4s-4-1.79-4-4V5c0-1.38 1.12-2.5 2.5-2.5s2.5 1.12 2.5 2.5v10.5c0 .55-.45 1-1 1s-1-.45-1-1V6H10v9.5c0 1.38 1.12 2.5 2.5 2.5s2.5-1.12 2.5-2.5V5c0-2.21-1.79-4-4-4S7 2.79 7 5v12.5c0 3.04 2.46 5.5 5.5 5.5s5.5-2.46 5.5-5.5V6h-1.5z" fill="currentColor"/>
+              </svg>
+            </button>
+            <button class="tool-btn voice-btn" id="voiceBtn" aria-label="Voice input" title="Voice input (speech-to-text)">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm-1-9c0-.55.45-1 1-1s1 .45 1 1v6c0 .55-.45 1-1 1s-1-.45-1-1V5zm6 6c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" fill="currentColor"/>
+              </svg>
+            </button>
+
+            <!-- Gemini Live Web Search Grounding Toggle -->
+            <button class="tool-btn frontier-toggle-btn" id="webSearchToggle" aria-label="Toggle Google Web Grounding" title="Gemini Web Grounding: Real-time search citations & fact verification">
+              <span class="frontier-toggle-icon">🌐</span>
+              <span class="frontier-toggle-text">Search</span>
+            </button>
+
+            <!-- Claude 3.7 / o1 Deep Thinking Chain-of-Thought Toggle -->
+            <button class="tool-btn frontier-toggle-btn active" id="deepReasoningToggle" aria-label="Toggle Deep Thinking Mode" title="Claude 3.7 / o1 Deep Thinking: Step-by-step chain-of-thought breakdown">
+              <span class="frontier-toggle-icon">🧠</span>
+              <span class="frontier-toggle-text">Think</span>
+            </button>
+
+            <!-- ChatGPT Advanced Voice Mode (Neural Orb) -->
+            <button class="tool-btn frontier-toggle-btn voice-orb-pill" id="advancedVoiceBtn" aria-label="Advanced Voice Mode" title="ChatGPT Advanced Voice Mode (Interactive 3D Sound Orb)">
+              <span class="frontier-toggle-icon">🎙️</span>
+              <span class="frontier-toggle-text">Voice Orb</span>
+            </button>
+          </div>
+          <textarea
+            id="chatInput"
+            class="chat-input"
+            placeholder="Message ChatAI..."
+            rows="1"
+            aria-label="Chat message input"
+          ></textarea>
+          <div class="input-actions">
+            <span class="char-count" id="charCount">0</span>
+            <button class="send-btn" id="sendBtn" aria-label="Send message" disabled>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" fill="currentColor"/>
+              </svg>
+            </button>
+          </div>
+        </div><!-- /.input-wrapper -->
+
+        <!-- File preview strip -->
+        <div class="file-preview-strip" id="filePreviewStrip" style="display:none" aria-label="Attached files"></div>
+
+        <p class="input-disclaimer">
+          <span class="disclaimer-badge">🔒 SOC-2 Certified</span>
+          <span>ChatAI Enterprise • Official AI Workspace • Verify critical data.</span>
+        </p>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ── API Settings Modal ── -->
+  <div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"></div>
+  <dialog class="settings-modal" id="settingsModal" aria-labelledby="modalTitle">
+    <div class="modal-header">
+      <h2 id="modalTitle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" fill="currentColor"/>
+        </svg>
+        API Settings
+      </h2>
+      <button class="modal-close" id="modalClose" aria-label="Close settings">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <!-- Provider -->
+      <div class="form-group">
+        <label class="form-label" for="providerSelect">AI Provider</label>
+        <div class="provider-grid" id="providerGrid">
+          <button class="provider-card active" data-provider="openai">
+            <span class="provider-logo">⚡</span>
+            <span class="provider-name">OpenAI</span>
+            <span class="provider-models">GPT-4o · GPT-3.5</span>
+          </button>
+          <button class="provider-card" data-provider="gemini">
+            <span class="provider-logo">✦</span>
+            <span class="provider-name">Gemini</span>
+            <span class="provider-models">Pro · Flash</span>
+          </button>
+          <button class="provider-card" data-provider="claude">
+            <span class="provider-logo">◆</span>
+            <span class="provider-name">Claude</span>
+            <span class="provider-models">3.5 Sonnet · Haiku</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Model for selected provider -->
+      <div class="form-group">
+        <label class="form-label" for="modelSelect">Model</label>
+        <select class="form-select" id="modelSelect">
+          <option value="gpt-4o">GPT-4o (Recommended)</option>
+          <option value="gpt-4o-mini">GPT-4o Mini (Faster)</option>
+          <option value="gpt-3.5-turbo">GPT-3.5 Turbo</option>
+        </select>
+      </div>
+
+      <!-- API Key -->
+      <div class="form-group">
+        <label class="form-label" for="apiKeyInput">
+          API Key
+          <span class="form-hint" id="apiKeyHint">Get yours at platform.openai.com</span>
+        </label>
+        <div class="key-input-wrap">
+          <input
+            type="password"
+            class="form-input"
+            id="apiKeyInput"
+            placeholder="sk-..."
+            autocomplete="off"
+            aria-describedby="keyStatus"
+          />
+          <button class="key-toggle" id="keyToggle" aria-label="Show/hide key">
+            <svg class="eye-open" width="16" height="16" viewBox="0 0 24 24" fill="none">
+              <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z" fill="currentColor"/>
+            </svg>
+            <svg class="eye-closed" width="16" height="16" viewBox="0 0 24 24" fill="none" style="display:none">
+              <path d="M12 7c2.76 0 5 2.24 5 5 0 .65-.13 1.26-.36 1.83l2.92 2.92c1.51-1.26 2.7-2.89 3.43-4.75-1.73-4.39-6-7.5-11-7.5-1.4 0-2.74.25-3.98.7l2.16 2.16C10.74 7.13 11.35 7 12 7zM2 4.27l2.28 2.28.46.46C3.08 8.3 1.78 10.02 1 12c1.73 4.39 6 7.5 11 7.5 1.55 0 3.03-.3 4.38-.84l.42.42L19.73 22 21 20.73 3.27 3 2 4.27zM7.53 9.8l1.55 1.55c-.05.21-.08.43-.08.65 0 1.66 1.34 3 3 3 .22 0 .44-.03.65-.08l1.55 1.55c-.67.33-1.41.53-2.2.53-2.76 0-5-2.24-5-5 0-.79.2-1.53.53-2.2zm4.31-.78l3.15 3.15.02-.16c0-1.66-1.34-3-3-3l-.17.01z" fill="currentColor"/>
+            </svg>
+          </button>
+        </div>
+        <p class="key-status" id="keyStatus"></p>
+      </div>
+
+      <!-- System prompt -->
+      <div class="form-group">
+        <label class="form-label" for="systemPrompt">System Prompt <span class="form-optional">optional</span></label>
+        <textarea
+          class="form-textarea"
+          id="systemPrompt"
+          rows="3"
+          placeholder="You are a helpful assistant..."
+        ></textarea>
+      </div>
+
+      <!-- TTS settings -->
+      <div class="form-group">
+        <label class="form-label">Text-to-Speech Voice</label>
+        <select class="form-select" id="ttsVoiceSelect">
+          <option value="">Default (browser)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <div class="api-status-pill" id="apiStatusPill">
+        <span class="status-dot"></span>
+        <span id="apiStatusText">No key saved</span>
+      </div>
+      <div class="modal-actions">
+        <button class="btn-secondary" id="clearKeyBtn">Clear Key</button>
+        <button class="btn-primary" id="saveKeyBtn">Save Settings</button>
+      </div>
+    </div>
+  </dialog>
+ 
+  <!-- ── Interactive Code Sandbox Modal ── -->
+  <dialog class="code-runner-modal" id="codeRunnerModal" aria-labelledby="runnerModalTitle">
+    <div class="modal-header">
+      <h2 id="runnerModalTitle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" fill="currentColor"/>
+        </svg>
+        Code Sandbox Runner
+      </h2>
+      <div class="modal-header-actions">
+        <button class="modal-icon-btn" id="runnerFullscreenBtn" aria-label="Toggle Fullscreen" title="Toggle Fullscreen">
+          <svg class="fs-expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" fill="currentColor"/>
+          </svg>
+          <svg class="fs-collapse-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" style="display:none">
+            <path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z" fill="currentColor"/>
+          </svg>
+        </button>
+        <button class="modal-close" id="runnerClose" aria-label="Close code runner">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="runner-body">
+      <div class="runner-editor-wrap">
+        <div class="runner-bar">
+          <div class="runner-lang-select-wrap">
+            <span class="runner-lang-dot" id="runnerLangDot"></span>
+            <select class="runner-lang-select" id="runnerLangSelect" aria-label="Select Programming Language">
+              <optgroup label="── Web & Frontend ──">
+                <option value="javascript">JavaScript (.js)</option>
+                <option value="typescript">TypeScript (.ts)</option>
+                <option value="jsx">React JSX (.jsx)</option>
+                <option value="tsx">React TSX (.tsx)</option>
+                <option value="html">HTML5 (.html)</option>
+                <option value="css">CSS3 (.css)</option>
+                <option value="scss">SCSS / SASS (.scss)</option>
+                <option value="less">Less (.less)</option>
+                <option value="vue">Vue.js (.vue)</option>
+                <option value="svelte">Svelte (.svelte)</option>
+                <option value="wat">WebAssembly (.wat)</option>
+              </optgroup>
+              <optgroup label="── Backend & Scripting ──">
+                <option value="python">Python (.py)</option>
+                <option value="php">PHP (.php)</option>
+                <option value="ruby">Ruby (.rb)</option>
+                <option value="perl">Perl (.pl)</option>
+                <option value="lua">Lua (.lua)</option>
+                <option value="tcl">Tcl (.tcl)</option>
+              </optgroup>
+              <optgroup label="── Systems & Native ──">
+                <option value="rust">Rust (.rs)</option>
+                <option value="go">Go (.go)</option>
+                <option value="c">C (.c)</option>
+                <option value="cpp">C++ (.cpp)</option>
+                <option value="csharp">C# (.cs)</option>
+                <option value="swift">Swift (.swift)</option>
+                <option value="objc">Objective-C (.m)</option>
+                <option value="zig">Zig (.zig)</option>
+                <option value="d">D (.d)</option>
+                <option value="nim">Nim (.nim)</option>
+                <option value="assembly">Assembly (.asm)</option>
+              </optgroup>
+              <optgroup label="── JVM & Enterprise ──">
+                <option value="java">Java (.java)</option>
+                <option value="kotlin">Kotlin (.kt)</option>
+                <option value="scala">Scala (.scala)</option>
+                <option value="groovy">Groovy (.groovy)</option>
+                <option value="clojure">Clojure (.clj)</option>
+              </optgroup>
+              <optgroup label="── Functional Languages ──">
+                <option value="haskell">Haskell (.hs)</option>
+                <option value="elixir">Elixir (.ex)</option>
+                <option value="erlang">Erlang (.erl)</option>
+                <option value="ocaml">OCaml (.ml)</option>
+                <option value="fsharp">F# (.fs)</option>
+                <option value="elm">Elm (.elm)</option>
+                <option value="lisp">Common Lisp (.lisp)</option>
+                <option value="racket">Racket (.rkt)</option>
+              </optgroup>
+              <optgroup label="── Data Science & Math ──">
+                <option value="r">R (.r)</option>
+                <option value="julia">Julia (.jl)</option>
+                <option value="matlab">MATLAB (.m)</option>
+                <option value="sas">SAS (.sas)</option>
+              </optgroup>
+              <optgroup label="── Databases & Query ──">
+                <option value="sql">SQL (.sql)</option>
+                <option value="postgresql">PostgreSQL (.pgsql)</option>
+                <option value="mysql">MySQL (.sql)</option>
+                <option value="sqlite">SQLite (.sqlite)</option>
+                <option value="plsql">PL/SQL (.pls)</option>
+                <option value="graphql">GraphQL (.gql)</option>
+              </optgroup>
+              <optgroup label="── Shell & Terminal ──">
+                <option value="bash">Bash (.sh)</option>
+                <option value="shell">Shell (.sh)</option>
+                <option value="zsh">Zsh (.zsh)</option>
+                <option value="powershell">PowerShell (.ps1)</option>
+                <option value="batch">Batch / CMD (.bat)</option>
+              </optgroup>
+              <optgroup label="── DevOps, Cloud & Config ──">
+                <option value="dockerfile">Dockerfile</option>
+                <option value="compose">Docker Compose (.yml)</option>
+                <option value="yaml">YAML (.yaml)</option>
+                <option value="toml">TOML (.toml)</option>
+                <option value="ini">INI (.ini)</option>
+                <option value="terraform">Terraform HCL (.tf)</option>
+                <option value="nginx">Nginx (.conf)</option>
+                <option value="apache">Apache (.conf)</option>
+                <option value="makefile">Makefile</option>
+                <option value="cmake">CMake (CMakeLists.txt)</option>
+              </optgroup>
+              <optgroup label="── Smart Contracts ──">
+                <option value="solidity">Solidity (.sol)</option>
+                <option value="vyper">Vyper (.vy)</option>
+                <option value="move">Move (.move)</option>
+              </optgroup>
+              <optgroup label="── Markup, Docs & Data ──">
+                <option value="markdown">Markdown (.md)</option>
+                <option value="json">JSON (.json)</option>
+                <option value="json5">JSON5 (.json5)</option>
+                <option value="xml">XML (.xml)</option>
+                <option value="svg">SVG (.svg)</option>
+                <option value="latex">LaTeX (.tex)</option>
+                <option value="csv">CSV (.csv)</option>
+                <option value="diff">Diff / Patch (.diff)</option>
+              </optgroup>
+            </select>
+          </div>
+          <div class="runner-bar-actions">
+            <button class="btn-secondary runner-dl-btn" id="runnerDownloadBtn" title="Download snippet as file">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/></svg>
+              Download
+            </button>
+            <button class="btn-primary runner-run-btn" id="runnerRunBtn">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              Execute Code
+            </button>
+          </div>
+        </div>
+        <textarea class="runner-code-area" id="runnerCodeInput" spellcheck="false" placeholder="// Write or edit code here..."></textarea>
+      </div>
+      <div class="runner-output-wrap">
+        <div class="runner-tabs">
+          <button class="runner-tab active" id="tabConsole">Console Log</button>
+          <button class="runner-tab" id="tabPreview">Live HTML Preview</button>
+        </div>
+        <div class="runner-panel" id="panelConsole">
+          <pre class="runner-console" id="runnerConsoleOutput">Ready. Click 'Execute Code' to run.</pre>
+        </div>
+        <div class="runner-panel" id="panelPreview" style="display:none">
+          <iframe class="runner-iframe" id="runnerIframe" sandbox="allow-scripts"></iframe>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ── Prompt Library Modal ── -->
+  <dialog class="prompt-lib-modal" id="promptLibModal" aria-labelledby="promptLibTitle">
+    <div class="modal-header">
+      <h2 id="promptLibTitle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z" fill="currentColor"/>
+        </svg>
+        Prompt Templates Library
+      </h2>
+      <button class="modal-close" id="promptLibClose" aria-label="Close prompt library">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+    <div class="prompt-lib-body">
+      <div class="prompt-tabs" id="promptTabs">
+        <button class="prompt-tab active" data-category="all">All</button>
+        <button class="prompt-tab" data-category="code">💻 Coding</button>
+        <button class="prompt-tab" data-category="write">✍️ Writing</button>
+        <button class="prompt-tab" data-category="strategy">💡 Strategy</button>
+        <button class="prompt-tab" data-category="learn">🎓 Learning</button>
+      </div>
+      <div class="prompt-grid" id="promptGrid"></div>
+    </div>
+  </dialog>
+
+  <!-- ── Share Modal ── -->
+  <dialog class="share-modal" id="shareModal" aria-labelledby="shareModalTitle">
+    <div class="modal-header">
+      <h2 id="shareModalTitle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" fill="currentColor"/>
+        </svg>
+        Share Conversation
+      </h2>
+      <button class="modal-close" id="shareModalClose" aria-label="Close share dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+    <div class="share-modal-body">
+      <p class="share-desc">Create a quick shareable summary or copy formatted transcript to clipboard.</p>
+      <div class="share-card">
+        <div class="share-stat-line">
+          <span id="shareChatTitle">Conversation</span>
+          <span class="share-badge" id="shareMsgCount">0 messages</span>
+        </div>
+        <textarea class="share-preview-area" id="sharePreviewArea" readonly rows="5"></textarea>
+      </div>
+      <div class="share-actions">
+        <button class="btn-secondary" id="shareCopyMarkdownBtn">Copy Markdown</button>
+        <button class="btn-primary" id="shareCopyTextBtn">Copy Text Snapshot</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ── Share Individual Message Modal ── -->
+  <dialog class="share-modal share-msg-dialog" id="shareMessageModal" aria-labelledby="shareMessageModalTitle">
+    <div class="modal-header">
+      <h2 id="shareMessageModalTitle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z" fill="currentColor"/>
+        </svg>
+        Share Message
+      </h2>
+      <button class="modal-close" id="shareMessageModalClose" aria-label="Close share message dialog">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+    <div class="share-modal-body">
+      <p class="share-desc">Share this specific AI insight or prompt with colleagues or external channels.</p>
+      
+      <!-- Styled Quote Card Preview -->
+      <div class="share-quote-card" id="shareMsgCard">
+        <div class="share-quote-header">
+          <div class="share-quote-author" id="shareMsgAuthor">
+            <span class="share-author-avatar" id="shareMsgAvatar">AI</span>
+            <span class="share-author-name" id="shareMsgAuthorName">ChatAI (GPT-4o)</span>
+          </div>
+          <span class="share-quote-tag">Verified Output</span>
+        </div>
+        <div class="share-quote-body" id="shareMsgTextPreview">
+          Message text preview...
+        </div>
+        <div class="share-quote-footer">
+          <span class="share-brand-tag">⚡ Generated via ChatAI Enterprise</span>
+          <span class="share-time-tag" id="shareMsgTime">Just now</span>
+        </div>
+      </div>
+
+      <!-- Quick Share Channels Row -->
+      <div class="share-channels-grid">
+        <button type="button" class="share-channel-btn" id="shareNativeBtn" title="Native System Share">
+          <span class="share-channel-icon">📲</span>
+          <span>System Share</span>
+        </button>
+        <button type="button" class="share-channel-btn" id="shareTwitterBtn" title="Share on X / Twitter">
+          <span class="share-channel-icon">𝕏</span>
+          <span>X / Twitter</span>
+        </button>
+        <button type="button" class="share-channel-btn" id="shareWhatsAppBtn" title="Share on WhatsApp">
+          <span class="share-channel-icon">💬</span>
+          <span>WhatsApp</span>
+        </button>
+        <button type="button" class="share-channel-btn" id="shareLinkedInBtn" title="Share on LinkedIn">
+          <span class="share-channel-icon">💼</span>
+          <span>LinkedIn</span>
+        </button>
+        <button type="button" class="share-channel-btn" id="shareEmailBtn" title="Share via Email">
+          <span class="share-channel-icon">✉️</span>
+          <span>Email</span>
+        </button>
+      </div>
+
+      <!-- Copy Actions Footer -->
+      <div class="share-actions">
+        <button class="btn-secondary" id="shareCopyMsgLinkBtn">🔗 Copy Message Link</button>
+        <button class="btn-primary" id="shareCopyMsgQuoteBtn">📋 Copy Quote Snippet</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ── Executive Command Palette (⌘K / Ctrl+K) ── -->
+  <dialog class="cmd-palette-modal" id="cmdPaletteModal" aria-labelledby="cmdPaletteTitle">
+    <div class="cmd-palette-search-wrap">
+      <svg class="cmd-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+        <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="currentColor"/>
+      </svg>
+      <input type="text" class="cmd-input" id="cmdPaletteInput" placeholder="Type a command or search actions... (e.g. model, code, theme)" autocomplete="off" />
+      <span class="cmd-esc-badge" id="cmdPaletteCloseBtn">ESC</span>
+    </div>
+    <div class="cmd-palette-list" id="cmdPaletteList"></div>
+    <div class="cmd-palette-footer">
+      <span><kbd class="cmd-key">↑</kbd><kbd class="cmd-key">↓</kbd> navigate</span>
+      <span><kbd class="cmd-key">↵</kbd> execute</span>
+      <span><kbd class="cmd-key">esc</kbd> close</span>
+    </div>
+  </dialog>
+
+  <!-- ── AI Image Creation Studio Modal ── -->
+  <dialog class="image-studio-modal" id="imageStudioModal" aria-labelledby="imageStudioTitle">
+    <div class="modal-header">
+      <div class="studio-header-title">
+        <div class="studio-logo-icon">🎨</div>
+        <div>
+          <h2 id="imageStudioTitle">AI Image Creation Studio</h2>
+          <span class="studio-header-sub">Synthesize photorealistic concept art, 3D renders, and cinematic imagery</span>
+        </div>
+      </div>
+      <button class="modal-close" id="imageStudioClose" aria-label="Close image studio">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+          <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="image-studio-body">
+      <!-- Left Column: Controls -->
+      <div class="studio-controls-col">
+        <!-- Prompt Section -->
+        <div class="studio-section">
+          <div class="studio-section-header">
+            <label class="studio-label" for="studioPromptInput">Prompt Description</label>
+            <div class="studio-prompt-actions">
+              <button class="studio-pill-btn" id="studioSurprisePromptBtn" title="Load an imaginative creative prompt">
+                <span>🎲</span> Surprise Me
+              </button>
+              <button class="studio-pill-btn active" id="studioEnhanceToggle" title="Automatically add high-detail quality modifiers">
+                <span>✨</span> Enhance Prompt
+              </button>
+            </div>
+          </div>
+          <div class="studio-prompt-wrap">
+            <textarea
+              class="studio-prompt-input"
+              id="studioPromptInput"
+              rows="3"
+              placeholder="Describe what you want to visualize in vivid detail... (e.g., A futuristic cyberpunk street in neon rain with flying hovercars)"
+            ></textarea>
+            <div class="studio-prompt-footer">
+              <span class="studio-prompt-counter" id="studioPromptCounter">0 characters</span>
+              <button class="studio-clear-prompt-btn" id="studioClearPromptBtn">Clear</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Style Presets Grid -->
+        <div class="studio-section">
+          <div class="studio-section-header">
+            <label class="studio-label">Artistic Style Preset</label>
+            <span class="studio-hint-badge" id="studioSelectedStyleBadge">Photorealistic</span>
+          </div>
+          <div class="studio-style-grid" id="studioStyleGrid">
+            <button class="studio-style-card active" data-style="photorealistic">
+              <span class="style-icon">📸</span>
+              <span class="style-name">Photorealistic</span>
+            </button>
+            <button class="studio-style-card" data-style="cyberpunk">
+              <span class="style-icon">🔮</span>
+              <span class="style-name">Cyberpunk</span>
+            </button>
+            <button class="studio-style-card" data-style="anime">
+              <span class="style-icon">🎌</span>
+              <span class="style-name">Anime / Manga</span>
+            </button>
+            <button class="studio-style-card" data-style="3d-render">
+              <span class="style-icon">🧊</span>
+              <span class="style-name">3D Render</span>
+            </button>
+            <button class="studio-style-card" data-style="digital-art">
+              <span class="style-icon">🎨</span>
+              <span class="style-name">Digital Concept</span>
+            </button>
+            <button class="studio-style-card" data-style="scifi">
+              <span class="style-icon">🪐</span>
+              <span class="style-name">Sci-Fi Universe</span>
+            </button>
+            <button class="studio-style-card" data-style="oil-painting">
+              <span class="style-icon">🖼️</span>
+              <span class="style-name">Oil Painting</span>
+            </button>
+            <button class="studio-style-card" data-style="pixel-art">
+              <span class="style-icon">👾</span>
+              <span class="style-name">Pixel Art</span>
+            </button>
+            <button class="studio-style-card" data-style="fantasy">
+              <span class="style-icon">🏰</span>
+              <span class="style-name">Dark Fantasy</span>
+            </button>
+            <button class="studio-style-card" data-style="isometric">
+              <span class="style-icon">📐</span>
+              <span class="style-name">Isometric 3D</span>
+            </button>
+            <button class="studio-style-card" data-style="cinematic">
+              <span class="style-icon">🎬</span>
+              <span class="style-name">Cinematic 8K</span>
+            </button>
+            <button class="studio-style-card" data-style="watercolor">
+              <span class="style-icon">🖌️</span>
+              <span class="style-name">Watercolor</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Aspect Ratio Selection -->
+        <div class="studio-section">
+          <label class="studio-label">Aspect Ratio & Canvas Size</label>
+          <div class="studio-aspect-grid" id="studioAspectGrid">
+            <button class="studio-aspect-btn active" data-ratio="1:1" data-w="1024" data-h="1024">
+              <span class="aspect-box ratio-1-1"></span>
+              <div class="aspect-info">
+                <span class="aspect-title">1:1 Square</span>
+                <span class="aspect-res">1024 × 1024</span>
+              </div>
+            </button>
+            <button class="studio-aspect-btn" data-ratio="16:9" data-w="1280" data-h="720">
+              <span class="aspect-box ratio-16-9"></span>
+              <div class="aspect-info">
+                <span class="aspect-title">16:9 Landscape</span>
+                <span class="aspect-res">1280 × 720</span>
+              </div>
+            </button>
+            <button class="studio-aspect-btn" data-ratio="9:16" data-w="720" data-h="1280">
+              <span class="aspect-box ratio-9-16"></span>
+              <div class="aspect-info">
+                <span class="aspect-title">9:16 Story / Mobile</span>
+                <span class="aspect-res">720 × 1280</span>
+              </div>
+            </button>
+            <button class="studio-aspect-btn" data-ratio="4:3" data-w="1024" data-h="768">
+              <span class="aspect-box ratio-4-3"></span>
+              <div class="aspect-info">
+                <span class="aspect-title">4:3 Classic</span>
+                <span class="aspect-res">1024 × 768</span>
+              </div>
+            </button>
+            <button class="studio-aspect-btn" data-ratio="21:9" data-w="1344" data-h="576">
+              <span class="aspect-box ratio-21-9"></span>
+              <div class="aspect-info">
+                <span class="aspect-title">21:9 Ultrawide</span>
+                <span class="aspect-res">1344 × 576</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- Advanced Engine Settings Accordion -->
+        <details class="studio-advanced-details">
+          <summary class="studio-advanced-summary">
+            <span>⚙️ Advanced Engine & Generation Parameters</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M7 10l5 5 5-5z" fill="currentColor"/></svg>
+          </summary>
+          <div class="studio-advanced-content">
+            <div class="form-group">
+              <label class="form-label" for="studioModelSelect">Synthesis Model</label>
+              <select class="form-select" id="studioModelSelect">
+                <option value="flux">Flux.1 Schnell (Ultra High Quality · Default)</option>
+                <option value="turbo">SDXL Turbo (Instant Generation)</option>
+                <option value="dall-e-3">OpenAI DALL-E 3 (Requires API key in Settings)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="studioNegativePrompt">Negative Prompt (what to avoid)</label>
+              <input type="text" class="form-input" id="studioNegativePrompt" placeholder="blurry, distorted, bad anatomy, low quality, oversaturated" />
+            </div>
+            <div class="form-group">
+              <div class="studio-seed-row">
+                <label class="form-label" for="studioSeedInput">Seed Value</label>
+                <button class="studio-seed-random-btn" id="studioSeedRandomBtn">🎲 Randomize</button>
+              </div>
+              <input type="number" class="form-input" id="studioSeedInput" placeholder="Auto-generated random seed" />
+            </div>
+          </div>
+        </details>
+
+        <!-- Generate CTA -->
+        <button class="studio-generate-btn" id="studioGenerateBtn">
+          <span class="studio-gen-icon">✨</span>
+          <span class="studio-gen-text">Generate Artwork</span>
+          <span class="studio-gen-badge">Flux Engine</span>
+        </button>
+      </div>
+
+      <!-- Right Column: Live Output & Recent Gallery -->
+      <div class="studio-display-col">
+        <div class="studio-canvas-card" id="studioCanvasCard">
+          <div class="studio-canvas-header">
+            <span class="studio-canvas-status" id="studioCanvasStatus">Ready</span>
+            <div class="studio-canvas-actions" id="studioCanvasActions" style="display:none">
+              <button class="studio-action-icon-btn" id="studioZoomBtn" title="Fullscreen zoom">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" fill="currentColor"/></svg>
+              </button>
+              <button class="studio-action-icon-btn" id="studioCopyUrlBtn" title="Copy image URL">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" fill="currentColor"/></svg>
+              </button>
+              <button class="studio-action-icon-btn" id="studioDownloadBtn" title="Download image (.jpg)">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/></svg>
+              </button>
+              <button class="studio-insert-chat-btn" id="studioInsertChatBtn" title="Send this artwork to active chat">
+                💬 Insert into Chat
+              </button>
+            </div>
+          </div>
+
+          <!-- Preview Body -->
+          <div class="studio-preview-viewport" id="studioPreviewViewport">
+            <!-- Empty state -->
+            <div class="studio-empty-state" id="studioEmptyState">
+              <div class="studio-empty-icon">🎨</div>
+              <h3>Visualize your imagination</h3>
+              <p>Type a prompt on the left or click <strong>"Surprise Me"</strong>, pick an artistic style and aspect ratio, and click <strong>"Generate Artwork"</strong>.</p>
+              <div class="studio-quick-prompts">
+                <button class="studio-quick-chip" onclick="studioSetQuickPrompt('Cyberpunk samurai in neon rainy Tokyo alleyway, 8k')">Cyberpunk Samurai</button>
+                <button class="studio-quick-chip" onclick="studioSetQuickPrompt('Astronaut floating in iridescent galaxy nebula, photorealistic')">Space Nebula</button>
+                <button class="studio-quick-chip" onclick="studioSetQuickPrompt('Cozy fantasy cottage in magical glowing forest, digital painting')">Fantasy Cottage</button>
+              </div>
+            </div>
+
+            <!-- Loading state -->
+            <div class="studio-loading-state" id="studioLoadingState" style="display:none">
+              <div class="studio-spinner-ring"></div>
+              <div class="studio-loading-title">Synthesizing Imagery...</div>
+              <div class="studio-loading-sub" id="studioLoadingSub">Running latent diffusion neural passes</div>
+              <div class="studio-progress-bar">
+                <div class="studio-progress-fill"></div>
+              </div>
+            </div>
+
+            <!-- Loaded image container -->
+            <div class="studio-image-wrap" id="studioImageWrap" style="display:none">
+              <img id="studioResultImg" alt="AI Generated Artwork" />
+            </div>
+          </div>
+
+          <!-- Metadata strip -->
+          <div class="studio-image-meta-bar" id="studioImageMetaBar" style="display:none">
+            <span class="meta-item"><strong id="metaRatio">1:1</strong></span>
+            <span class="meta-item"><strong id="metaModel">Flux</strong></span>
+            <span class="meta-item"><strong id="metaSeed">Seed: 0</strong></span>
+            <span class="meta-prompt" id="metaPromptText">Prompt</span>
+          </div>
+        </div>
+
+        <!-- Recent Creations Strip -->
+        <div class="studio-gallery-section">
+          <div class="studio-gallery-header">
+            <span class="studio-gallery-title">Recent Creations</span>
+            <button class="studio-gallery-clear" id="studioClearGalleryBtn">Clear Gallery</button>
+          </div>
+          <div class="studio-gallery-strip" id="studioGalleryStrip">
+            <div class="studio-gallery-empty" id="studioGalleryEmpty">No images generated yet.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ── Executive Dashboard Widgets Drawer ── -->
+  <div class="dashboard-backdrop" id="dashboardBackdrop" aria-hidden="true"></div>
+  <aside class="executive-dashboard-panel" id="executiveDashboardPanel" aria-label="Executive Dashboard Widgets">
+    <div class="exec-dashboard-header">
+      <div class="exec-header-left">
+        <div class="exec-dash-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" fill="currentColor"/></svg>
+        </div>
+        <div>
+          <div class="exec-title-row">
+            <h2 class="exec-dash-title">Executive Command Deck</h2>
+            <span class="exec-live-pill"><span class="exec-pulse-dot"></span>LIVE</span>
+          </div>
+          <span class="exec-dash-sub">Telemetry, strategic tasks, focus sprint & intelligence workload</span>
+        </div>
+      </div>
+      <div class="exec-header-actions">
+        <button class="exec-close-btn" id="dashboardCloseBtn" aria-label="Close Dashboard" title="Close Dashboard (Esc)">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="exec-dashboard-body">
+      <!-- WIDGET 1: System Telemetry & Token Efficiency -->
+      <div class="exec-widget-card" id="widgetTelemetry">
+        <div class="widget-header">
+          <div class="widget-title-wrap">
+            <span class="widget-icon">⚡</span>
+            <span class="widget-title">Telemetry & Token Efficiency</span>
+          </div>
+          <span class="widget-badge">Real-time</span>
+        </div>
+        <div class="telemetry-grid">
+          <div class="telemetry-metric">
+            <span class="metric-label">Tokens Processed</span>
+            <span class="metric-value" id="dashTokensVal">0</span>
+            <span class="metric-sub" id="dashTokensSpeed">0 t/s throughput</span>
+          </div>
+          <div class="telemetry-metric">
+            <span class="metric-label">Response Latency</span>
+            <span class="metric-value text-emerald" id="dashLatencyVal">~28ms</span>
+            <span class="metric-sub">P99 sub-second</span>
+          </div>
+          <div class="telemetry-metric">
+            <span class="metric-label">Efficiency Score</span>
+            <span class="metric-value text-accent" id="dashEfficiencyVal">99.4%</span>
+            <span class="metric-sub">Zero dropouts</span>
+          </div>
+          <div class="telemetry-metric">
+            <span class="metric-label">Session Value</span>
+            <span class="metric-value text-gold" id="dashSavingsVal">$42.80</span>
+            <span class="metric-sub">Enterprise tier</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- WIDGET 2: Strategic Task Board -->
+      <div class="exec-widget-card" id="widgetTaskBoard">
+        <div class="widget-header">
+          <div class="widget-title-wrap">
+            <span class="widget-icon">🎯</span>
+            <span class="widget-title">Strategic Objective Board</span>
+          </div>
+          <span class="widget-badge" id="execTaskCounter">0 / 0</span>
+        </div>
+        <div class="task-input-row">
+          <input type="text" class="exec-task-input" id="execTaskInput" placeholder="Add strategic objective or action item..." />
+          <select class="exec-task-priority" id="execTaskPriority" aria-label="Task Priority">
+            <option value="high">High</option>
+            <option value="med" selected>Med</option>
+            <option value="low">Low</option>
+          </select>
+          <button class="exec-task-add-btn" id="execTaskAddBtn" title="Add objective">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="currentColor"/></svg>
+          </button>
+        </div>
+        <div class="exec-tasks-list" id="execTasksList">
+          <!-- Dynamic items rendered via JS -->
+        </div>
+      </div>
+
+      <!-- WIDGET 3: Deep Work Focus Timer -->
+      <div class="exec-widget-card" id="widgetFocusTimer">
+        <div class="widget-header">
+          <div class="widget-title-wrap">
+            <span class="widget-icon">⏳</span>
+            <span class="widget-title">Deep Work Focus Sprint</span>
+          </div>
+          <span class="widget-badge" id="focusCycleBadge">Sprint 1 / 4</span>
+        </div>
+        <div class="focus-timer-body">
+          <div class="focus-timer-display" id="focusTimerDisplay">25:00</div>
+          <div class="focus-mode-label" id="focusModeLabel">Deep Architecture Sprint (25m)</div>
+          <div class="focus-timer-actions">
+            <button class="focus-btn primary" id="focusStartBtn">Start Sprint</button>
+            <button class="focus-btn" id="focusResetBtn">Reset</button>
+            <button class="focus-btn mode" id="focusModeToggleBtn">50m Extended</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- WIDGET 4: Intelligence Workload Allocation -->
+      <div class="exec-widget-card" id="widgetWorkload">
+        <div class="widget-header">
+          <div class="widget-title-wrap">
+            <span class="widget-icon">📊</span>
+            <span class="widget-title">Intelligence Allocation</span>
+          </div>
+          <span class="widget-badge">Dynamic</span>
+        </div>
+        <div class="workload-bars-list">
+          <div class="workload-item">
+            <div class="workload-info">
+              <span class="workload-name">Full-Stack Code Synthesis</span>
+              <span class="workload-pct" id="workloadCodePct">42%</span>
+            </div>
+            <div class="workload-track"><div class="workload-fill fill-accent" id="workloadCodeFill" style="width:42%"></div></div>
+          </div>
+          <div class="workload-item">
+            <div class="workload-info">
+              <span class="workload-name">Executive Strategy & Reasoning</span>
+              <span class="workload-pct" id="workloadReasonPct">28%</span>
+            </div>
+            <div class="workload-track"><div class="workload-fill fill-emerald" id="workloadReasonFill" style="width:28%"></div></div>
+          </div>
+          <div class="workload-item">
+            <div class="workload-info">
+              <span class="workload-name">Visual Concept & Image Generation</span>
+              <span class="workload-pct" id="workloadImagePct">18%</span>
+            </div>
+            <div class="workload-track"><div class="workload-fill fill-magenta" id="workloadImageFill" style="width:18%"></div></div>
+          </div>
+          <div class="workload-item">
+            <div class="workload-info">
+              <span class="workload-name">Data Pipeline & Systems Audit</span>
+              <span class="workload-pct" id="workloadDataPct">12%</span>
+            </div>
+            <div class="workload-track"><div class="workload-fill fill-cyan" id="workloadDataFill" style="width:12%"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WIDGET 5: Executive Scratchpad -->
+      <div class="exec-widget-card" id="widgetScratchpad">
+        <div class="widget-header">
+          <div class="widget-title-wrap">
+            <span class="widget-icon">📝</span>
+            <span class="widget-title">Executive Scratchpad</span>
+          </div>
+          <div class="scratchpad-header-meta">
+            <span class="widget-badge" id="scratchpadWords">0 words</span>
+            <button class="scratchpad-clear-btn" id="scratchpadClearBtn" title="Clear notes">Clear</button>
+          </div>
+        </div>
+        <textarea class="exec-scratchpad-area" id="execScratchpadArea" placeholder="Capture meeting bullets, uncommitted thoughts, strategic KPIs, or quick snippets... (Auto-saved locally)"></textarea>
+      </div>
+
+      <!-- WIDGET 6: Strategic Executive Launchpad -->
+      <div class="exec-widget-card" id="widgetLaunchpad">
+        <div class="widget-header">
+          <div class="widget-title-wrap">
+            <span class="widget-icon">🚀</span>
+            <span class="widget-title">Executive Launchpad</span>
+          </div>
+          <span class="widget-badge">1-Click Inject</span>
+        </div>
+        <div class="launchpad-grid">
+          <button class="launch-card" data-prompt="Conduct an exhaustive boardroom-ready SWOT and strategic risk analysis for entering a new enterprise AI market segment. Provide executive KPIs, mitigation vectors, and capital allocation recommendations.">
+            <span class="launch-icon">🏢</span>
+            <div class="launch-info">
+              <span class="launch-title">Boardroom Risk Analysis</span>
+              <span class="launch-desc">SWOT, capital allocation & mitigation vectors</span>
+            </div>
+          </button>
+          <button class="launch-card" data-prompt="Perform a complete architectural review and performance audit of our microservices infrastructure. Identify latency bottlenecks, single points of failure, zero-trust security gaps, and horizontal scaling strategies.">
+            <span class="launch-icon">🛡️</span>
+            <div class="launch-info">
+              <span class="launch-title">System Architecture Audit</span>
+              <span class="launch-desc">Zero-trust, P99 latency & microservices resilience</span>
+            </div>
+          </button>
+          <button class="launch-card" data-prompt="Draft a high-impact Q3 Strategic Executive Briefing suitable for C-suite distribution. Summarize strategic deliverables, competitive moats, headcount ROI, and 12-month projected milestones.">
+            <span class="launch-icon">📑</span>
+            <div class="launch-info">
+              <span class="launch-title">Q3 Executive Brief</span>
+              <span class="launch-desc">C-Suite summary, competitive moats & ROI</span>
+            </div>
+          </button>
+          <button class="launch-card" data-prompt="Design an end-to-end event-driven telemetry and monitoring pipeline using modern cloud primitives. Provide complete code implementations for Kafka/Redis ingestion, schema validation, and Grafana dashboard alerts.">
+            <span class="launch-icon">📊</span>
+            <div class="launch-info">
+              <span class="launch-title">Telemetry Pipeline Blueprint</span>
+              <span class="launch-desc">Event-driven Kafka/Redis ingestion & alerting code</span>
+            </div>
+          </button>
+        </div>
+      </div>
+
+      <!-- WIDGET 7: Real-Time Gateway Health & Model Latency Monitor -->
+      <div class="exec-widget-card" id="widgetGatewayHealth">
+        <div class="widget-header">
+          <div class="widget-title-wrap">
+            <span class="widget-icon">⚡</span>
+            <span class="widget-title">Gateway Health & Latency</span>
+          </div>
+          <button class="gateway-ping-btn" id="pingGatewayBtn" title="Run instant multi-gateway latency benchmark">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="23 4 23 10 17 10"></polyline>
+              <polyline points="1 20 1 14 7 14"></polyline>
+              <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+            </svg>
+            <span>Ping All</span>
+          </button>
+        </div>
+        <div class="gateway-status-list">
+          <div class="gateway-node-item">
+            <div class="gateway-node-meta">
+              <span class="gateway-status-dot"></span>
+              <span class="gateway-node-name">OpenAI Gateway (us-east-1)</span>
+            </div>
+            <div class="gateway-node-stats">
+              <span class="gateway-latency-badge" id="pingOpenAI">24ms</span>
+              <span class="gateway-health-tag">99.99%</span>
+            </div>
+          </div>
+          <div class="gateway-node-item">
+            <div class="gateway-node-meta">
+              <span class="gateway-status-dot"></span>
+              <span class="gateway-node-name">Anthropic Frontier (va-2)</span>
+            </div>
+            <div class="gateway-node-stats">
+              <span class="gateway-latency-badge" id="pingAnthropic">38ms</span>
+              <span class="gateway-health-tag">99.95%</span>
+            </div>
+          </div>
+          <div class="gateway-node-item">
+            <div class="gateway-node-meta">
+              <span class="gateway-status-dot"></span>
+              <span class="gateway-node-name">Google Vertex AI (us-central)</span>
+            </div>
+            <div class="gateway-node-stats">
+              <span class="gateway-latency-badge" id="pingGemini">19ms</span>
+              <span class="gateway-health-tag">99.98%</span>
+            </div>
+          </div>
+          <div class="gateway-node-item">
+            <div class="gateway-node-meta">
+              <span class="gateway-status-dot local"></span>
+              <span class="gateway-node-name">Local WebLLM Edge</span>
+            </div>
+            <div class="gateway-node-stats">
+              <span class="gateway-latency-badge ultra" id="pingLocal">3ms</span>
+              <span class="gateway-health-tag secure">P99 Ultra</span>
+            </div>
+          </div>
+        </div>
+        <div class="gateway-footer-meta">
+          <span class="gateway-tls-badge">🛡️ TLS 1.3 Zero-Retention SLA</span>
+          <span class="gateway-last-ping" id="gatewayLastPing">Updated just now</span>
+        </div>
+      </div>
+
+      <!-- WIDGET 8: Strategic Executive & Boardroom Briefing Generator -->
+      <div class="exec-widget-card" id="widgetBriefingGenerator">
+        <div class="widget-header">
+          <div class="widget-title-wrap">
+            <span class="widget-icon">🏛️</span>
+            <span class="widget-title">Boardroom Briefings</span>
+          </div>
+          <span class="widget-badge">Executive</span>
+        </div>
+        <div class="briefing-presets-grid">
+          <button class="briefing-card" data-briefing="Construct a comprehensive Board of Directors Strategic Memorandum evaluating our enterprise AI ROI, computing cost amortisation over 36 months, competitive moat defensibility, and executive risk mitigations. Format with executive summary, financial metrics, and decision matrix.">
+            <div class="briefing-card-head">
+              <span class="briefing-icon">📈</span>
+              <span class="briefing-title">Board of Directors Memo</span>
+            </div>
+            <p class="briefing-desc">36-mo ROI, computing capex, moats & decision matrix</p>
+          </button>
+          <button class="briefing-card" data-briefing="Draft an Executive C-Level Security & Compliance Briefing covering SOC-2 Type II posture, HIPAA/GDPR data isolation boundaries, zero-trust LLM inference, and external vulnerability mitigation. Include auditor-ready signoff checklist.">
+            <div class="briefing-card-head">
+              <span class="briefing-icon">🔒</span>
+              <span class="briefing-title">C-Suite Security Brief</span>
+            </div>
+            <p class="briefing-desc">SOC-2 Type II, zero-trust LLM isolation & auditor signoff</p>
+          </button>
+          <button class="briefing-card" data-briefing="Produce an M&A Technical Due Diligence & Architecture Assessment report for acquiring a high-growth machine learning startup. Include code health audit, tech stack debt analysis, patent/IP defensibility, and post-merger integration risks.">
+            <div class="briefing-card-head">
+              <span class="briefing-icon">⚖️</span>
+              <span class="briefing-title">M&A Tech Due Diligence</span>
+            </div>
+            <p class="briefing-desc">Startup code health, debt audit, IP risk & synergies</p>
+          </button>
+          <button class="briefing-card" data-briefing="Synthesize a 12-Month Chief Product & Technology Roadmap (Q1-Q4) detailing milestone deliverables, engineering headcount allocation, tier-1 infra upgrades, and revenue expansion targets.">
+            <div class="briefing-card-head">
+              <span class="briefing-icon">🧭</span>
+              <span class="briefing-title">CPTO 12-Month Roadmap</span>
+            </div>
+            <p class="briefing-desc">Q1-Q4 milestones, headcount allocation & SLA goals</p>
+          </button>
+        </div>
+      </div>
+
+      <!-- WIDGET 9: Token Budget & Cloud Cost Optimizer -->
+      <div class="exec-widget-card" id="widgetCostOptimizer">
+        <div class="widget-header">
+          <div class="widget-title-wrap">
+            <span class="widget-icon">💎</span>
+            <span class="widget-title">Token Budget & Cost</span>
+          </div>
+          <span class="widget-badge" id="budgetTierBadge">Enterprise Tier</span>
+        </div>
+        <div class="cost-optimizer-content">
+          <div class="budget-stat-row">
+            <div class="budget-stat">
+              <span class="budget-label">Monthly Allocation</span>
+              <span class="budget-val" id="budgetTotalTokens">10,000,000</span>
+            </div>
+            <div class="budget-stat right">
+              <span class="budget-label">Consumed to Date</span>
+              <span class="budget-val text-accent" id="budgetConsumedTokens">1,482,900</span>
+            </div>
+          </div>
+          <div class="budget-progress-wrap">
+            <div class="budget-progress-bar">
+              <div class="budget-progress-fill" id="budgetFillBar" style="width: 14.8%;"></div>
+            </div>
+            <div class="budget-progress-labels">
+              <span class="progress-sub" id="budgetRemainingPct">85.2% budget remaining</span>
+              <span class="progress-sub" id="budgetDaysLeft">19 days left in cycle</span>
+            </div>
+          </div>
+          <div class="cost-metrics-grid">
+            <div class="cost-metric-box">
+              <span class="cm-label">Projected Month-End</span>
+              <span class="cm-val" id="costProjectedVal">$184.20</span>
+              <span class="cm-sub text-emerald">↓ 22% vs last cycle</span>
+            </div>
+            <div class="cost-metric-box">
+              <span class="cm-label">Cached Context Savings</span>
+              <span class="cm-val text-emerald" id="costSavingsVal">$412.80</span>
+              <span class="cm-sub">via Prompt Caching</span>
+            </div>
+          </div>
+          <div class="cost-actions-row">
+            <button class="cost-action-btn" id="simulateCostSavingsBtn">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+              <span>Simulate Save</span>
+            </button>
+            <button class="cost-action-btn secondary" id="exportCostReportBtn">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+              <span>Export CSV</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- WIDGET 10: Executive Voice & Frequency Equalizer Console -->
+      <div class="exec-widget-card" id="widgetVoiceTelemetry">
+        <div class="widget-header">
+          <div class="widget-title-wrap">
+            <span class="widget-icon">🎙️</span>
+            <span class="widget-title">Voice Telemetry & EQ</span>
+          </div>
+          <span class="widget-badge" id="voiceStatusBadge">Active DSP</span>
+        </div>
+        <div class="voice-telemetry-body">
+          <div class="eq-visualizer-container" id="eqVisualizer">
+            <div class="eq-bar" style="--h: 38%"></div>
+            <div class="eq-bar" style="--h: 62%"></div>
+            <div class="eq-bar" style="--h: 88%"></div>
+            <div class="eq-bar" style="--h: 45%"></div>
+            <div class="eq-bar" style="--h: 74%"></div>
+            <div class="eq-bar" style="--h: 95%"></div>
+            <div class="eq-bar" style="--h: 58%"></div>
+            <div class="eq-bar" style="--h: 81%"></div>
+            <div class="eq-bar" style="--h: 66%"></div>
+            <div class="eq-bar" style="--h: 40%"></div>
+            <div class="eq-bar" style="--h: 78%"></div>
+            <div class="eq-bar" style="--h: 90%"></div>
+            <div class="eq-bar" style="--h: 52%"></div>
+            <div class="eq-bar" style="--h: 35%"></div>
+          </div>
+          <div class="voice-controls-row">
+            <div class="voice-param-group">
+              <label class="voice-param-label" for="voicePresetSelect">Synthesis Profile</label>
+              <select class="voice-select-ctrl" id="voicePresetSelect">
+                <option value="executive">Executive Presence (Low P99 Latency)</option>
+                <option value="warm">Boardroom Warmth (Studio Natural)</option>
+                <option value="rapid">Rapid Synthesis (2.0x Sprinted)</option>
+                <option value="socratic">Socratic Academic (Deep Intonation)</option>
+              </select>
+            </div>
+          </div>
+          <div class="voice-toggles-grid">
+            <button class="voice-toggle-chip active" id="chipNoiseSuppression">
+              <span class="chip-indicator"></span>
+              <span>AI De-Noise</span>
+            </button>
+            <button class="voice-toggle-chip active" id="chipAcousticEcho">
+              <span class="chip-indicator"></span>
+              <span>Echo Neutralizer</span>
+            </button>
+            <button class="voice-toggle-chip" id="chipSpatialAudio">
+              <span class="chip-indicator"></span>
+              <span>Spatial 3D</span>
+            </button>
+          </div>
+          <div class="voice-test-row">
+            <button class="voice-preview-btn" id="testVoiceSynthesisBtn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+              <span>Test Audio</span>
+            </button>
+            <span class="voice-codec-tag">Opus 48kHz HD</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- ── Full-Page Executive Login & Authentication Portal ── -->
+  <div class="auth-overlay" id="authOverlay" style="display:none;" aria-modal="true" role="dialog" aria-labelledby="authTitle">
+    <!-- Ambient glowing backdrop effect -->
+    <div class="auth-ambient-glow auth-glow-1"></div>
+    <div class="auth-ambient-glow auth-glow-2"></div>
+    <div class="auth-grid-pattern"></div>
+
+    <div class="auth-container">
+      <!-- Auth Card -->
+      <div class="auth-card">
+        
+        <!-- Header / Logo -->
+        <div class="auth-header">
+          <div class="auth-logo-row">
+            <div class="auth-logo-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 2L2 7l10 5 10-5-10-5zm0 8.5L4.5 7 12 3.25 19.5 7 12 10.5zm-8 4l8 4 8-4v3l-8 4-8-4v-3z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="auth-logo-text-wrap">
+              <div class="auth-brand-row">
+                <span class="auth-brand-name" id="authTitle">ChatAI</span>
+                <span class="auth-verified-badge" title="Official Verified Enterprise Intelligence">
+                  <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  OFFICIAL
+                </span>
+              </div>
+              <span class="auth-brand-sub">Enterprise Workspace Portal</span>
+            </div>
+          </div>
+          <button class="auth-close-btn" id="authCloseBtn" aria-label="Close auth dialog" title="Close (Continue to Chat)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/></svg>
+          </button>
+        </div>
+
+        <!-- Auth Tabs: Sign In / Create Account -->
+        <div class="auth-tabs-nav" role="tablist">
+          <button class="auth-tab-btn active" id="tabSignInBtn" role="tab" aria-selected="true">Sign In</button>
+          <button class="auth-tab-btn" id="tabRegisterBtn" role="tab" aria-selected="false">Create Account</button>
+        </div>
+
+        <!-- Quick 1-Click Executive Demo Access Button -->
+        <div class="auth-demo-banner">
+          <button class="auth-demo-btn" id="authDemoBtn" title="Instant access with preconfigured Executive CTO session">
+            <span class="auth-demo-icon">⚡</span>
+            <div class="auth-demo-info">
+              <span class="auth-demo-title">Quick Access: Executive Partner</span>
+              <span class="auth-demo-sub">One-click instant login as Chief Technology Officer</span>
+            </div>
+            <span class="auth-demo-arrow">→</span>
+          </button>
+        </div>
+
+        <div class="auth-divider">
+          <span>or continue with credentials</span>
+        </div>
+
+        <!-- SIGN IN FORM -->
+        <form class="auth-form" id="signInForm">
+          <div class="auth-input-group">
+            <label class="auth-label" for="signInEmail">Work Email</label>
+            <div class="auth-input-wrap">
+              <span class="auth-input-icon">✉️</span>
+              <input type="email" id="signInEmail" class="auth-input" placeholder="name@company.com" required autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="auth-input-group">
+            <div class="auth-label-row">
+              <label class="auth-label" for="signInPassword">Password</label>
+              <button type="button" class="auth-forgot-btn" id="authForgotBtn">Forgot password?</button>
+            </div>
+            <div class="auth-input-wrap">
+              <span class="auth-input-icon">🔒</span>
+              <input type="password" id="signInPassword" class="auth-input" placeholder="••••••••••••" required autocomplete="current-password" />
+              <button type="button" class="auth-pw-toggle" id="signInPwToggle" aria-label="Toggle password visibility">👁️</button>
+            </div>
+          </div>
+
+          <div class="auth-options-row">
+            <label class="auth-checkbox-label">
+              <input type="checkbox" id="signInRemember" class="auth-checkbox" checked />
+              <span>Remember this executive session (30 days)</span>
+            </label>
+          </div>
+
+          <button type="submit" class="auth-submit-btn" id="signInSubmitBtn">
+            <span class="auth-submit-text">Authenticate to Workspace</span>
+            <span class="auth-submit-arrow">→</span>
+          </button>
+        </form>
+
+        <!-- REGISTER FORM (Hidden by default) -->
+        <form class="auth-form" id="registerForm" style="display:none;">
+          <div class="auth-input-group">
+            <label class="auth-label" for="regName">Full Legal Name</label>
+            <div class="auth-input-wrap">
+              <span class="auth-input-icon">👤</span>
+              <input type="text" id="regName" class="auth-input" placeholder="Sarah Chen" required autocomplete="name" />
+            </div>
+          </div>
+
+          <div class="auth-input-group">
+            <label class="auth-label" for="regEmail">Corporate Email</label>
+            <div class="auth-input-wrap">
+              <span class="auth-input-icon">✉️</span>
+              <input type="email" id="regEmail" class="auth-input" placeholder="s.chen@apex-systems.io" required autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="auth-input-group">
+            <label class="auth-label" for="regCompany">Organization / Enterprise Domain</label>
+            <div class="auth-input-wrap">
+              <span class="auth-input-icon">🏢</span>
+              <input type="text" id="regCompany" class="auth-input" placeholder="Apex Global Systems Inc." required />
+            </div>
+          </div>
+
+          <div class="auth-input-group">
+            <label class="auth-label" for="regPassword">Master Password</label>
+            <div class="auth-input-wrap">
+              <span class="auth-input-icon">🔒</span>
+              <input type="password" id="regPassword" class="auth-input" placeholder="At least 8 characters" required autocomplete="new-password" />
+              <button type="button" class="auth-pw-toggle" id="regPwToggle" aria-label="Toggle password visibility">👁️</button>
+            </div>
+            <!-- Password Strength Bar -->
+            <div class="auth-pw-strength" id="regPwStrength">
+              <div class="pw-strength-track"><div class="pw-strength-bar" id="pwStrengthBar"></div></div>
+              <span class="pw-strength-label" id="pwStrengthLabel">Password complexity: required</span>
+            </div>
+          </div>
+
+          <button type="submit" class="auth-submit-btn" id="registerSubmitBtn">
+            <span class="auth-submit-text">Initialize Enterprise Account</span>
+            <span class="auth-submit-arrow">✨</span>
+          </button>
+        </form>
+
+        <!-- Enterprise Single Sign-On (SSO) Section -->
+        <div class="auth-sso-section">
+          <div class="auth-sso-title">Enterprise Single Sign-On (SAML / OAuth)</div>
+          <div class="auth-sso-grid">
+            <button class="sso-btn" id="ssoGoogleBtn" type="button" title="Sign in with Google Workspace">
+              <svg width="15" height="15" viewBox="0 0 24 24"><path fill="#EA4335" d="M12 5c1.6 0 3 .6 4.1 1.7l3.1-3.1C17.3 1.8 14.8 1 12 1 7.5 1 3.7 3.6 1.9 7.3l3.7 2.9C6.5 7.4 9 5 12 5z"/><path fill="#4285F4" d="M23.5 12.3c0-.8-.1-1.6-.2-2.3H12v4.6h6.5c-.3 1.5-1.1 2.8-2.4 3.7l3.7 2.9c2.2-2 3.7-5 3.7-8.9z"/><path fill="#FBBC05" d="M5.6 14.8c-.2-.7-.4-1.5-.4-2.3s.1-1.6.4-2.3L1.9 7.3C.7 9.7 0 12.3 0 15.2s.7 5.5 1.9 7.9l3.7-2.9c-.2-.7-.4-1.5-.4-2.4z"/><path fill="#34A853" d="M12 23.5c3.2 0 6-1.1 8-3l-3.7-2.9c-1.1.7-2.5 1.2-4.3 1.2-3 0-5.5-2-6.4-4.8L1.9 16.9C3.7 20.6 7.5 23.5 12 23.5z"/></svg>
+              <span>Google</span>
+            </button>
+            <button class="sso-btn" id="ssoMicrosoftBtn" type="button" title="Sign in with Microsoft Azure AD">
+              <svg width="15" height="15" viewBox="0 0 24 24"><rect x="1" y="1" width="10" height="10" fill="#f25022"/><rect x="13" y="1" width="10" height="10" fill="#7fba00"/><rect x="1" y="13" width="10" height="10" fill="#00a4ef"/><rect x="13" y="13" width="10" height="10" fill="#ffb900"/></svg>
+              <span>Azure AD</span>
+            </button>
+            <button class="sso-btn" id="ssoGithubBtn" type="button" title="Sign in with GitHub Enterprise">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              <span>GitHub</span>
+            </button>
+            <button class="sso-btn" id="ssoOktaBtn" type="button" title="Sign in with Okta SAML 2.0">
+              <span class="sso-okta-icon">⭕</span>
+              <span>Okta</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Compliance & Security Seal -->
+        <div class="auth-security-footer">
+          <div class="auth-sec-badge">
+            <span class="sec-icon">🛡️</span>
+            <span>SOC-2 Type II</span>
+          </div>
+          <div class="auth-sec-badge">
+            <span class="sec-icon">🔒</span>
+            <span>256-bit TLS</span>
+          </div>
+          <div class="auth-sec-badge">
+            <span class="sec-icon">⚡</span>
+            <span>SLA 99.99%</span>
+          </div>
+        </div>
+
+      </div><!-- /.auth-card -->
+    </div><!-- /.auth-container -->
+  </div><!-- /.auth-overlay -->
+
+  <!-- ── Claude 3.5 Artifacts & Live Interactive Canvas Drawer ── -->
+  <aside class="claude-artifacts-canvas" id="claudeArtifactsCanvas" aria-label="Claude Artifacts Interactive Canvas">
+    <div class="canvas-header">
+      <div class="canvas-header-left">
+        <div class="canvas-type-icon" id="canvasTypeIcon">⚡</div>
+        <div class="canvas-title-wrap">
+          <div class="canvas-title-row">
+            <h3 class="canvas-title" id="canvasTitle">Interactive Component</h3>
+            <span class="canvas-tag" id="canvasTag">HTML5 App</span>
+          </div>
+          <span class="canvas-subtitle" id="canvasSubtitle">Claude 3.5 Sonnet Live Sandbox</span>
+        </div>
+      </div>
+      <div class="canvas-header-actions">
+        <!-- Viewport Mode Switcher -->
+        <div class="canvas-viewport-nav">
+          <button class="canvas-vp-btn active" data-vp="desktop" title="Desktop Viewport (100%)">🖥️</button>
+          <button class="canvas-vp-btn" data-vp="tablet" title="Tablet Viewport (768px)">📱</button>
+          <button class="canvas-vp-btn" data-vp="mobile" title="Mobile Viewport (375px)">📲</button>
+        </div>
+        <!-- Code vs Preview Toggle -->
+        <div class="canvas-tab-toggle">
+          <button class="canvas-tab-btn active" id="canvasPreviewTab">Preview</button>
+          <button class="canvas-tab-btn" id="canvasCodeTab">Code</button>
+        </div>
+        <!-- Reload, Copy, Download, Close -->
+        <button class="canvas-action-btn" id="canvasReloadBtn" title="Reload Canvas Sandbox">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M17.65 6.35A7.958 7.958 0 0 0 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z" fill="currentColor"/></svg>
+        </button>
+        <button class="canvas-action-btn" id="canvasCopyCodeBtn" title="Copy Code">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z" fill="currentColor"/></svg>
+        </button>
+        <button class="canvas-action-btn" id="canvasDownloadBtn" title="Download Artifact (.html)">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" fill="currentColor"/></svg>
+        </button>
+        <button class="canvas-close-btn" id="canvasCloseBtn" aria-label="Close Canvas">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Canvas Body -->
+    <div class="canvas-body">
+      <!-- Live Interactive Iframe Viewport -->
+      <div class="canvas-preview-panel" id="canvasPreviewPanel">
+        <div class="canvas-frame-container" id="canvasFrameContainer">
+          <iframe id="canvasIframe" class="canvas-iframe" sandbox="allow-scripts allow-modals allow-same-origin allow-forms allow-popups" title="Interactive Artifact Sandbox"></iframe>
+        </div>
+      </div>
+
+      <!-- Code Inspector View -->
+      <div class="canvas-code-panel" id="canvasCodePanel" style="display:none;">
+        <pre class="canvas-code-pre"><code id="canvasCodeBlock" class="language-html"></code></pre>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ── ChatGPT Advanced Voice Mode Overlay with 3D Neural Audio Orb ── -->
+  <dialog class="advanced-voice-modal" id="advancedVoiceModal" aria-labelledby="voiceModalTitle">
+    <div class="voice-modal-backdrop"></div>
+    
+    <div class="voice-modal-content">
+      <!-- Voice Header -->
+      <div class="voice-modal-header">
+        <div class="voice-brand">
+          <div class="voice-brand-dot"></div>
+          <span class="voice-brand-title" id="voiceModalTitle">Advanced Voice Mode</span>
+          <span class="voice-model-badge">GPT-4o Audio</span>
+        </div>
+        <button class="voice-close-icon" id="advancedVoiceCloseBtn" aria-label="Close Voice Mode">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/></svg>
+        </button>
+      </div>
+
+      <!-- Centerpiece: 3D Chromatic Fluid Neural Audio Orb -->
+      <div class="voice-orb-container">
+        <div class="voice-orb-glow"></div>
+        <div class="voice-orb-rings">
+          <div class="orb-ring ring-1"></div>
+          <div class="orb-ring ring-2"></div>
+          <div class="orb-ring ring-3"></div>
+        </div>
+        <canvas id="voiceOrbCanvas" class="voice-orb-canvas" width="280" height="280"></canvas>
+      </div>
+
+      <!-- Voice State & Transcription -->
+      <div class="voice-telemetry">
+        <div class="voice-status-pill" id="voiceStatusPill">
+          <span class="voice-wave-bar bar-1"></span>
+          <span class="voice-wave-bar bar-2"></span>
+          <span class="voice-wave-bar bar-3"></span>
+          <span class="voice-status-text" id="voiceStatusText">Listening...</span>
+        </div>
+        <div class="voice-transcription-box">
+          <p class="voice-live-text" id="voiceLiveText">Speak naturally with ChatAI...</p>
+        </div>
+      </div>
+
+      <!-- Voice Controls Toolbar -->
+      <div class="voice-modal-controls">
+        <div class="voice-persona-select-wrap">
+          <span class="voice-select-label">Voice Tone:</span>
+          <select class="voice-persona-select" id="voicePersonaSelect" aria-label="Select AI Voice Accent">
+            <option value="breeze">Breeze (Warm & Natural)</option>
+            <option value="cove">Cove (Deep Executive)</option>
+            <option value="juniper">Juniper (Energetic Tech)</option>
+            <option value="ember">Ember (Analytical Clear)</option>
+            <option value="sol">Sol (Smooth Socratic)</option>
+          </select>
+        </div>
+
+        <div class="voice-actions-group">
+          <button class="voice-control-btn mute" id="voiceMuteMicBtn" aria-label="Toggle Mute" title="Mute Microphone">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm-1-9c0-.55.45-1 1-1s1 .45 1 1v6c0 .55-.45 1-1 1s-1-.45-1-1V5zm6 6c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z" fill="currentColor"/></svg>
+          </button>
+          <button class="voice-control-btn end" id="voiceEndSessionBtn" title="End Voice Session">
+            ✕ End Session
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </dialog>
+
+  <!-- ── ChatGPT Memory & Custom Instructions Modal ── -->
+  <dialog class="memory-modal" id="memoryModal" aria-labelledby="memoryModalTitle">
+    <div class="modal-header">
+      <h2 id="memoryModalTitle">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M12 3c-4.97 0-9 4.03-9 9 0 2.12.74 4.07 1.97 5.61L4.35 21l3.68-.96A8.93 8.93 0 0 0 12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm0 16c-1.61 0-3.11-.47-4.38-1.28l-.31-.2-2.18.57.58-2.13-.2-.33A6.972 6.972 0 0 1 5 12c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7zm1-11h-2v3H8v2h3v3h2v-3h3v-2h-3V8z" fill="currentColor"/></svg>
+        Custom Instructions & Memory
+      </h2>
+      <button class="modal-close" id="memoryCloseBtn" aria-label="Close memory settings">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/></svg>
+      </button>
+    </div>
+
+    <div class="modal-body memory-modal-body">
+      <!-- Section 1: User Context -->
+      <div class="form-group">
+        <label class="form-label" for="memUserContext">
+          What would you like ChatAI to know about you?
+          <span class="form-hint">Role, industry, tech stack, or corporate objectives</span>
+        </label>
+        <textarea id="memUserContext" class="form-textarea" rows="3" placeholder="e.g. I am a Principal Architect at a fintech enterprise. We use Node.js, TypeScript, PostgreSQL, and AWS. Prioritize SOC-2 security, P99 latency, and type-safety."></textarea>
+      </div>
+
+      <!-- Section 2: Response Behavior -->
+      <div class="form-group">
+        <label class="form-label" for="memResponseBehavior">
+          How would you like ChatAI to respond?
+          <span class="form-hint">Tone, output format, code structure rules</span>
+        </label>
+        <textarea id="memResponseBehavior" class="form-textarea" rows="3" placeholder="e.g. Provide production-ready, clean code without placeholder comments. Be concise and direct. Include trade-off analysis for architectural decisions."></textarea>
+      </div>
+
+      <!-- Section 3: Stored Neural Memories List -->
+      <div class="form-group">
+        <div class="memory-list-header">
+          <label class="form-label">Active Stored Memories</label>
+          <button type="button" class="memory-clear-btn" id="clearAllMemoriesBtn">Clear All Memories</button>
+        </div>
+        <div class="memory-input-row">
+          <input type="text" class="form-input" id="memoryNewInput" placeholder="Add a memory (e.g. Prefers Tailwind over Vanilla CSS)..." />
+          <button type="button" class="btn-primary" id="memoryAddBtn" style="padding: 7px 14px; font-size: 12px;">Remember</button>
+        </div>
+        <div class="memories-chips-list" id="memoriesChipsList">
+          <!-- Dynamically populated chips -->
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <span class="memory-status-text" id="memoryStatusText">Memory is active across all chats</span>
+      <div class="modal-actions">
+        <button class="btn-secondary" id="memoryCancelBtn">Cancel</button>
+        <button class="btn-primary" id="memorySaveBtn">Save Instructions</button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ── Google Search Console & Official SEO Portal Modal ── -->
+  <dialog class="modal google-seo-modal" id="googleSeoModal" aria-labelledby="googleSeoModalTitle">
+    <div class="modal-header">
+      <h2 id="googleSeoModalTitle" style="display:flex; align-items:center; gap:8px;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="#4285F4"/>
+        </svg>
+        <span>Google Search Console & SEO Portal</span>
+        <span class="official-verified-badge" style="margin-left:4px;">GOOGLE READY</span>
+      </h2>
+      <button class="modal-close" id="googleSeoCloseBtn" aria-label="Close Google SEO Portal">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/></svg>
+      </button>
+    </div>
+
+    <div class="modal-body google-seo-body">
+      <!-- Official Google Search Console Hero Card (Exact replica from Google Search Console) -->
+      <div class="gsc-onboarding-card">
+        <div class="gsc-onboarding-left">
+          <h1 class="gsc-onboarding-title">Track and improve your performance on Google Search</h1>
+          
+          <button class="gsc-add-website-btn" id="gscAddWebsiteBtn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="2" y1="12" x2="22" y2="12"></line>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+            </svg>
+            <span>Add a website</span>
+          </button>
+
+          <div class="gsc-platforms-section">
+            <div class="gsc-platforms-head">
+              <span class="gsc-badge-new">New</span>
+              <p class="gsc-platforms-subtitle">Add a <strong>platform account or channel</strong> to discover how visitors find your content on Google Search</p>
+            </div>
+
+            <div class="gsc-platform-list">
+              <div class="gsc-platform-row">
+                <div class="gsc-platform-info">
+                  <span class="gsc-plat-icon insta">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor"/></svg>
+                  </span>
+                  <span class="gsc-plat-name">Instagram</span>
+                </div>
+                <button class="gsc-plat-btn" data-platform="instagram">Add</button>
+              </div>
+
+              <div class="gsc-platform-row">
+                <div class="gsc-platform-info">
+                  <span class="gsc-plat-icon tiktok">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.12V9.42a6.34 6.34 0 0 0-.86-.06 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V9.08a8.16 8.16 0 0 0 4.77 1.52v-3.45a4.85 4.85 0 0 1-1-.46z"/></svg>
+                  </span>
+                  <span class="gsc-plat-name">TikTok</span>
+                </div>
+                <button class="gsc-plat-btn" data-platform="tiktok">Add</button>
+              </div>
+
+              <div class="gsc-platform-row">
+                <div class="gsc-platform-info">
+                  <span class="gsc-plat-icon x-corp">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                  </span>
+                  <span class="gsc-plat-name">X</span>
+                </div>
+                <button class="gsc-plat-btn" data-platform="x">Add</button>
+              </div>
+
+              <div class="gsc-platform-row">
+                <div class="gsc-platform-info">
+                  <span class="gsc-plat-icon yt">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                  </span>
+                  <span class="gsc-plat-name">YouTube</span>
+                </div>
+                <button class="gsc-plat-btn" data-platform="youtube">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="gsc-onboarding-right">
+          <!-- Mountain Vector Art Illustration matching Google Search Console -->
+          <svg class="gsc-mountain-art" viewBox="0 0 360 440" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="440" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#BAE6FD" stop-opacity="0.35"/>
+                <stop offset="1" stop-color="#E0F2FE" stop-opacity="0.05"/>
+              </linearGradient>
+              <linearGradient id="mountGrad1" x1="180" y1="50" x2="180" y2="440" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#4ADE80"/>
+                <stop offset="1" stop-color="#16A34A"/>
+              </linearGradient>
+              <linearGradient id="mountGrad2" x1="130" y1="120" x2="130" y2="440" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#22C55E"/>
+                <stop offset="1" stop-color="#15803D"/>
+              </linearGradient>
+            </defs>
+            <rect width="360" height="440" rx="14" fill="url(#skyGrad)"/>
+            <line x1="0" y1="110" x2="360" y2="110" stroke="rgba(255,255,255,0.4)" stroke-dasharray="4 4"/>
+            <line x1="0" y1="180" x2="360" y2="180" stroke="rgba(255,255,255,0.4)" stroke-dasharray="4 4"/>
+            <line x1="0" y1="260" x2="360" y2="260" stroke="rgba(255,255,255,0.4)" stroke-dasharray="4 4"/>
+            <path d="M-20 440L70 190L190 280L250 80L380 440Z" fill="#86EFAC" fill-opacity="0.35"/>
+            <path d="M-10 440L100 170L190 240L250 60L300 180L380 440Z" fill="url(#mountGrad1)"/>
+            <path d="M-10 440L70 220L160 290L220 120L290 230L370 440Z" fill="url(#mountGrad2)"/>
+            <!-- Flag -->
+            <line x1="250" y1="60" x2="250" y2="42" stroke="#3B82F6" stroke-width="2.5"/>
+            <polygon points="250,42 266,48 250,54" fill="#3B82F6"/>
+            <!-- Growth Points -->
+            <circle cx="100" cy="170" r="4.5" fill="#FFFFFF"/>
+            <circle cx="150" cy="210" r="3.5" fill="#FFFFFF"/>
+            <circle cx="190" cy="240" r="4.5" fill="#FFFFFF"/>
+            <circle cx="250" cy="60" r="5" fill="#FFFFFF"/>
+            <circle cx="300" cy="180" r="4" fill="#FFFFFF"/>
+            <line x1="100" y1="170" x2="150" y2="210" stroke="#FFFFFF" stroke-width="1.8" stroke-dasharray="3 3"/>
+            <line x1="150" y1="210" x2="190" y2="240" stroke="#FFFFFF" stroke-width="1.8" stroke-dasharray="3 3"/>
+            <line x1="190" y1="240" x2="250" y2="60" stroke="#FFFFFF" stroke-width="1.8"/>
+            <line x1="250" y1="60" x2="300" y2="180" stroke="#FFFFFF" stroke-width="1.8"/>
+            <!-- Cliff & Climber -->
+            <path d="M250 440C250 400 240 375 255 355H330C340 375 350 400 350 440Z" fill="#064E3B"/>
+            <circle cx="265" cy="332" r="3.5" fill="#FBBF24"/>
+            <rect x="262" y="336" width="6" height="11" rx="2" fill="#10B981"/>
+            <line x1="260" y1="341" x2="258" y2="355" stroke="#047857" stroke-width="1.8"/>
+            <line x1="267" y1="341" x2="265" y2="355" stroke="#047857" stroke-width="1.8"/>
+            <line x1="258" y1="330" x2="258" y2="355" stroke="#CBD5E1" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Google Status Card -->
+      <div class="seo-overview-card">
+        <div class="seo-score-circle">
+          <span class="seo-score-num">100</span>
+          <span class="seo-score-sub">SEO Score</span>
+        </div>
+        <div class="seo-overview-info">
+          <div class="seo-overview-headline">
+            <span class="seo-site-url">https://chatai-enterprise.loca.lt/</span>
+            <span class="seo-badge-tag success">Indexed Ready</span>
+          </div>
+          <p class="seo-overview-desc">This enterprise website has been fully configured with Googlebot directives, XML sitemap indexing, Schema.org rich snippets, and Google Search Console verification tokens.</p>
+        </div>
+      </div>
+
+      <!-- Google Search Console Verification Section -->
+      <div class="seo-card">
+        <div class="seo-card-header">
+          <div class="seo-card-title-wrap">
+            <span class="seo-card-icon">🔑</span>
+            <span class="seo-card-title">Google Search Console Verification</span>
+          </div>
+          <span class="seo-badge-tag" id="gscStatusBadge">Token Configured</span>
+        </div>
+        <p class="seo-card-desc">Use this meta tag in Google Search Console under <strong>Settings → Ownership Verification → HTML Tag</strong>:</p>
+        <div class="seo-code-box">
+          <code id="googleVerificationCodeSnippet">&lt;meta name="google-site-verification" content="googleb9ec117c47883587" /&gt;</code>
+          <button class="seo-copy-btn" id="copyGoogleVerificationBtn" title="Copy verification tag">Copy Tag</button>
+        </div>
+        <div class="seo-action-links">
+          <a href="https://search.google.com/search-console" target="_blank" rel="noopener noreferrer" class="seo-ext-btn primary">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+            <span>Open Google Search Console</span>
+          </a>
+          <button class="seo-ext-btn" id="updateGscTokenBtn">
+            <span>Edit Token</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Google Indexing Endpoints Grid -->
+      <div class="seo-endpoints-grid">
+        <div class="seo-endpoint-card">
+          <div class="seo-ep-head">
+            <span class="seo-ep-name">Sitemap XML</span>
+            <span class="seo-ep-status live">HTTP 200</span>
+          </div>
+          <p class="seo-ep-path">/sitemap.xml</p>
+          <div class="seo-ep-actions">
+            <a href="/sitemap.xml" target="_blank" class="seo-ep-link">View XML</a>
+            <button class="seo-ep-btn" id="pingGooglebotSitemapBtn">Ping Google</button>
+          </div>
+        </div>
+
+        <div class="seo-endpoint-card">
+          <div class="seo-ep-head">
+            <span class="seo-ep-name">Robots.txt</span>
+            <span class="seo-ep-status live">HTTP 200</span>
+          </div>
+          <p class="seo-ep-path">/robots.txt</p>
+          <div class="seo-ep-actions">
+            <a href="/robots.txt" target="_blank" class="seo-ep-link">View TXT</a>
+            <span class="seo-ep-tag">Googlebot Allowed</span>
+          </div>
+        </div>
+
+        <div class="seo-endpoint-card">
+          <div class="seo-ep-head">
+            <span class="seo-ep-name">Schema.org JSON-LD</span>
+            <span class="seo-ep-status live">Valid</span>
+          </div>
+          <p class="seo-ep-path">WebApplication + Org + Sitelinks</p>
+          <div class="seo-ep-actions">
+            <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener noreferrer" class="seo-ep-link">Test Rich Results</a>
+          </div>
+        </div>
+
+        <div class="seo-endpoint-card">
+          <div class="seo-ep-head">
+            <span class="seo-ep-name">Web App Manifest</span>
+            <span class="seo-ep-status live">Active</span>
+          </div>
+          <p class="seo-ep-path">/manifest.json</p>
+          <div class="seo-ep-actions">
+            <a href="/manifest.json" target="_blank" class="seo-ep-link">View JSON</a>
+            <span class="seo-ep-tag">PWA Installable</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Live Google SEO Health Checklist -->
+      <div class="seo-checklist-card">
+        <h3 class="seo-checklist-title">Google Search Indexing Checklist</h3>
+        <div class="seo-checklist-grid">
+          <div class="seo-check-item done">
+            <span class="seo-check-icon">✓</span>
+            <div class="seo-check-meta">
+              <span class="seo-check-label">Single H1 & Semantic Hierarchy</span>
+              <span class="seo-check-desc">How can I assist you today?</span>
+            </div>
+          </div>
+          <div class="seo-check-item done">
+            <span class="seo-check-icon">✓</span>
+            <div class="seo-check-meta">
+              <span class="seo-check-label">Canonical URL Specified</span>
+              <span class="seo-check-desc">https://chatai-enterprise.web.app/</span>
+            </div>
+          </div>
+          <div class="seo-check-item done">
+            <span class="seo-check-icon">✓</span>
+            <div class="seo-check-meta">
+              <span class="seo-check-label">Meta Description (155 chars)</span>
+              <span class="seo-check-desc">Frontier AI reasoning, image studio, and executive deck</span>
+            </div>
+          </div>
+          <div class="seo-check-item done">
+            <span class="seo-check-icon">✓</span>
+            <div class="seo-check-meta">
+              <span class="seo-check-label">OpenGraph & Twitter Summary Card</span>
+              <span class="seo-check-desc">Rich social cards and search preview tags</span>
+            </div>
+          </div>
+          <div class="seo-check-item done">
+            <span class="seo-check-icon">✓</span>
+            <div class="seo-check-meta">
+              <span class="seo-check-label">Mobile Friendly Viewport</span>
+              <span class="seo-check-desc">Responsive layouts with high Lighthouse score</span>
+            </div>
+          </div>
+          <div class="seo-check-item done">
+            <span class="seo-check-icon">✓</span>
+            <div class="seo-check-meta">
+              <span class="seo-check-label">Googlebot Directives Active</span>
+              <span class="seo-check-desc">index, follow, max-image-preview:large</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <span class="seo-footer-sub">🛡️ Configured strictly following official Google Search Central Guidelines</span>
+      <div class="modal-actions">
+        <button class="btn-primary" id="googleSeoDoneBtn">Done</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+# Googlebot & Search Engine Crawling Directives
+# ChatAI Enterprise Official Workspace
+User-agent: Googlebot
+Allow: /
+Allow: /index.html
+Allow: /style.css
+Allow: /app.js
+Allow: /sitemap.xml
+Disallow: /api/
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /assets/
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /api/
+
+Sitemap: https://chatai-enterprise.loca.lt/sitemap.xml

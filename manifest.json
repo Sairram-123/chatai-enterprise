@@ -1,0 +1,19 @@
+{
+  "name": "ChatAI Enterprise Intelligence Workspace",
+  "short_name": "ChatAI",
+  "description": "Enterprise AI intelligence workspace with frontier neural models, AI image studio, and executive telemetry.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090d1a",
+  "theme_color": "#6366f1",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%236366f1'%3E%3Cpath d='M12 2L2 7l10 5 10-5-10-5zm0 8.5L4.5 7 12 3.25 19.5 7 12 10.5zm-8 4l8 4 8-4v3l-8 4-8-4v-3z'/%3E%3C/svg%3E",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["productivity", "utilities", "business"]
+}
