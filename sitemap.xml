@@ -4,25 +4,25 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://chatai-enterprise.loca.lt/</loc>
+    <loc>https://sairram-123.github.io/chatai-enterprise/</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://chatai-enterprise.loca.lt/#studio</loc>
+    <loc>https://sairram-123.github.io/chatai-enterprise/#studio</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chatai-enterprise.loca.lt/#dashboard</loc>
+    <loc>https://sairram-123.github.io/chatai-enterprise/#dashboard</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://chatai-enterprise.loca.lt/#auth</loc>
+    <loc>https://sairram-123.github.io/chatai-enterprise/#auth</loc>
     <lastmod>2026-09-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

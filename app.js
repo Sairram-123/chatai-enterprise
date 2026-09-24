@@ -6773,6 +6773,26 @@ function initGoogleSeoPortal() {
     });
   }
 
+  // Google Search Console Ownership Auto-Verified Modal Handlers
+  const gscAutoOverlay = document.getElementById('gscAutoVerifyOverlay');
+  const gscModalDoneBtn = document.getElementById('gscModalDoneBtn');
+  const seoReopenVerifyBtn = document.getElementById('seoReopenVerifyBtn');
+
+  if (gscModalDoneBtn && gscAutoOverlay) {
+    gscModalDoneBtn.addEventListener('click', () => {
+      gscAutoOverlay.classList.add('dismissed');
+      showToast('✅ Ownership auto-verified via HTML file (googleb9ec117c47883587.html)');
+    });
+  }
+
+  if (seoReopenVerifyBtn && gscAutoOverlay) {
+    seoReopenVerifyBtn.addEventListener('click', () => {
+      gscAutoOverlay.classList.remove('dismissed');
+      const card = document.querySelector('.gsc-onboarding-card');
+      if (card) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+  }
+
   // Load custom verification token if stored
   const savedToken = localStorage.getItem('chatai_google_site_verification');
   if (savedToken) {

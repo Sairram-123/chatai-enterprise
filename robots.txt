@@ -19,4 +19,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://chatai-enterprise.loca.lt/sitemap.xml
+Sitemap: https://sairram-123.github.io/chatai-enterprise/sitemap.xml
