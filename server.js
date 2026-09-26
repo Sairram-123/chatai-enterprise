@@ -30,7 +30,7 @@ const server = http.createServer((req, res) => {
         const payload = JSON.parse(body || '{}');
         const postData = JSON.stringify({
           messages: payload.messages || [{ role: 'user', content: 'hello' }],
-          model: payload.model || 'openai'
+          model: 'openai'
         });
 
         const https = require('https');
@@ -171,8 +171,81 @@ const server = http.createServer((req, res) => {
     }
   }
 
+  // 1c. API route for Network Info (LAN IP for Same Wi-Fi sharing & Public Host)
+  if (req.method === 'GET' && req.url === '/api/network-info') {
+    const os = require('os');
+    const nets = os.networkInterfaces();
+    let localIp = '127.0.0.1';
+    for (const name of Object.keys(nets)) {
+      for (const net of nets[name]) {
+        if (net.family === 'IPv4' && !net.internal) {
+          localIp = net.address;
+          break;
+        }
+      }
+      if (localIp !== '127.0.0.1') break;
+    }
+    res.writeHead(200, {
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*'
+    });
+    res.end(JSON.stringify({
+      localIp,
+      port: PORT,
+      lanUrl: `http://${localIp}:${PORT}`,
+      publicUrl: 'https://sairram-123.github.io/chatai-enterprise/'
+    }));
+    return;
+  }
+
+  // 1d. API route to persist & retrieve shared conversations across devices
+  if (req.method === 'POST' && req.url === '/api/share') {
+    let body = '';
+    req.on('data', chunk => body += chunk);
+    req.on('end', () => {
+      try {
+        const payload = JSON.parse(body || '{}');
+        const shareId = payload.id || ('c_' + Date.now());
+        const dataDir = path.join(DIR, 'data');
+        if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
+        const sharesFile = path.join(dataDir, 'shares.json');
+        let shares = {};
+        if (fs.existsSync(sharesFile)) {
+          try { shares = JSON.parse(fs.readFileSync(sharesFile, 'utf8') || '{}'); } catch {}
+        }
+        shares[shareId] = payload;
+        fs.writeFileSync(sharesFile, JSON.stringify(shares, null, 2), 'utf8');
+        res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+        res.end(JSON.stringify({ success: true, id: shareId }));
+      } catch (err) {
+        res.writeHead(500, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+        res.end(JSON.stringify({ error: err.message }));
+      }
+    });
+    return;
+  }
+
+  if (req.method === 'GET' && req.url.startsWith('/api/share')) {
+    const parsed = new URL(req.url, `http://${req.headers.host || '127.0.0.1'}`);
+    const shareId = parsed.searchParams.get('id') || req.url.split('/api/share/')[1];
+    const sharesFile = path.join(DIR, 'data', 'shares.json');
+    if (fs.existsSync(sharesFile)) {
+      try {
+        const shares = JSON.parse(fs.readFileSync(sharesFile, 'utf8') || '{}');
+        if (shares && shares[shareId]) {
+          res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+          res.end(JSON.stringify(shares[shareId]));
+          return;
+        }
+      } catch {}
+    }
+    res.writeHead(404, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
+    res.end(JSON.stringify({ error: 'Shared conversation not found' }));
+    return;
+  }
+
   // Handle CORS preflight
-  if (req.method === 'OPTIONS' && (req.url === '/api/chat' || req.url.startsWith('/api/image'))) {
+  if (req.method === 'OPTIONS') {
     res.writeHead(204, {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
@@ -212,6 +285,20 @@ const server = http.createServer((req, res) => {
   fs.createReadStream(filePath).pipe(res);
 });
 
-server.listen(PORT, '127.0.0.1', () => {
-  console.log(`Server listening on http://127.0.0.1:${PORT}`);
+server.listen(PORT, '0.0.0.0', () => {
+  const os = require('os');
+  const nets = os.networkInterfaces();
+  let localIp = '127.0.0.1';
+  for (const name of Object.keys(nets)) {
+    for (const net of nets[name]) {
+      if (net.family === 'IPv4' && !net.internal) {
+        localIp = net.address;
+        break;
+      }
+    }
+  }
+  console.log(`Server listening on all network interfaces:`);
+  console.log(`  Local:   http://127.0.0.1:${PORT}`);
+  console.log(`  Network: http://${localIp}:${PORT}`);
+  console.log(`  Public:  https://sairram-123.github.io/chatai-enterprise/`);
 });

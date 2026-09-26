@@ -137,6 +137,16 @@ const dom = {
   sharePreviewArea:    $('sharePreviewArea'),
   shareCopyMarkdownBtn:$('shareCopyMarkdownBtn'),
   shareCopyTextBtn:    $('shareCopyTextBtn'),
+  shareLinkInput:         $('shareLinkInput'),
+  shareCopyLinkBtn:       $('shareCopyLinkBtn'),
+  shareActionCopyLinkBtn: $('shareActionCopyLinkBtn'),
+  shareToWhatsAppBtn:     $('shareToWhatsAppBtn'),
+  shareTargetTabs:        $('shareTargetTabs'),
+  shareWifiIpBadge:       $('shareWifiIpBadge'),
+  shareLinkTypeTitle:     $('shareLinkTypeTitle'),
+  shareLinkTypeBadge:     $('shareLinkTypeBadge'),
+  shareNetworkNotice:     $('shareNetworkNotice'),
+  shareNoticeText:        $('shareNoticeText'),
 
   // Theme Accent Switcher
   themeAccentPicker:   $('themeAccentPicker'),
@@ -3284,8 +3294,81 @@ window.usePromptTemplate = function(id) {
 };
 
 // ═══════════════════════════════════════════════════════════════
-//  SHARE CONVERSATION MODAL
+//  SHARE CONVERSATION MODAL & CLEAN SHORT LINKS
 // ═══════════════════════════════════════════════════════════════
+
+state.shareTarget = 'wifi';
+state.networkInfo = {
+  localIp: '192.168.0.102',
+  port: 3000,
+  publicUrl: 'https://sairram-123.github.io/chatai-enterprise/'
+};
+
+// Fetch live network info from server (detects WiFi LAN IP & Public URL)
+async function fetchNetworkInfo() {
+  try {
+    const res = await fetch('/api/network-info');
+    if (res.ok) {
+      const data = await res.json();
+      state.networkInfo = data;
+      if (dom.shareWifiIpBadge && data.localIp) {
+        dom.shareWifiIpBadge.textContent = 'For WhatsApp';
+      }
+      if (dom.shareModal && dom.shareModal.open) {
+        updateShareLinkDisplay();
+      }
+    }
+  } catch {}
+}
+
+function updateShareLinkDisplay() {
+  if (!state.messages.length) return;
+  const firstUser = state.messages.find(m => m.role === 'user');
+  const title = firstUser ? firstUser.content.slice(0, 35) + '…' : 'ChatAI Conversation';
+  const shareId = 'c_' + (state.currentChatId || Date.now());
+
+  let targetUrl = '';
+  let typeTitle = 'Short Share Link';
+  let typeBadge = 'Clean & Short';
+  let noticeText = '';
+
+  const isLocalOrigin = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost' || window.location.hostname.startsWith('192.168.');
+  const publicBase = state.networkInfo?.publicUrl || 'https://sairram-123.github.io/chatai-enterprise/';
+  const port = state.networkInfo?.port || window.location.port || '3000';
+  const localIp = state.networkInfo?.localIp || '192.168.0.102';
+
+  if (state.shareTarget === 'public') {
+    targetUrl = `${publicBase}#share=${shareId}`;
+    typeTitle = 'Public Web Link';
+    typeBadge = 'GitHub Pages';
+    noticeText = '<strong>Public Web Link:</strong> Clean short link for your public GitHub Pages deployment.';
+  } else if (state.shareTarget === 'local') {
+    targetUrl = `http://127.0.0.1:${port}/#share=${shareId}`;
+    typeTitle = 'Local PC Link';
+    typeBadge = '127.0.0.1';
+    noticeText = '<strong>This PC Only:</strong> Opens in other tabs or private windows on this specific computer.';
+  } else {
+    // Default 'wifi' - clean, short, single-line link for WhatsApp & mobile devices!
+    targetUrl = `http://${localIp}:${port}/#share=${shareId}`;
+    typeTitle = 'Wi-Fi / WhatsApp Short Link';
+    typeBadge = `LAN (${localIp})`;
+    noticeText = `<strong>Clean Short Link (One Line):</strong> Short, single-line link. Anyone connected to your Wi-Fi (phone or laptop) can open and read this chat immediately!`;
+  }
+
+  if (dom.shareLinkInput) {
+    dom.shareLinkInput.value = targetUrl;
+  }
+  if (dom.shareLinkTypeTitle) {
+    dom.shareLinkTypeTitle.innerHTML = `
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none">
+        <path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z" fill="currentColor"/>
+      </svg>
+      ${typeTitle}
+    `;
+  }
+  if (dom.shareLinkTypeBadge) dom.shareLinkTypeBadge.textContent = typeBadge;
+  if (dom.shareNoticeText) dom.shareNoticeText.innerHTML = noticeText;
+}
 
 function openShareModal() {
   if (!state.messages.length) {
@@ -3305,7 +3388,109 @@ function openShareModal() {
   });
 
   dom.sharePreviewArea.value = transcript;
+
+  // Generate public shareable link
+  if (!state.currentChatId) {
+    state.currentChatId = Date.now();
+  }
+  persistCurrentChat();
+
+  const shareId = 'c_' + state.currentChatId;
+  const sharePayload = {
+    id: shareId,
+    chatId: state.currentChatId,
+    title: title,
+    messages: state.messages.map(m => ({
+      role: m.role,
+      content: m.content,
+      id: m.id,
+      sources: m.sources,
+      timestamp: m.timestamp || Date.now()
+    })),
+    model: state.apiModel,
+    provider: state.provider,
+    createdAt: Date.now()
+  };
+
+  try {
+    const registry = JSON.parse(localStorage.getItem('chatai_shared_registry') || '{}');
+    registry[shareId] = sharePayload;
+    localStorage.setItem('chatai_shared_registry', JSON.stringify(registry));
+  } catch (err) {
+    console.warn('Could not save to shared registry:', err);
+  }
+
+  // Backup sync to server
+  fetch('/api/share', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(sharePayload)
+  }).catch(() => {});
+
+  // Fetch local Wi-Fi IP
+  fetchNetworkInfo();
+
+  // Default destination: Wi-Fi LAN link (clean and short for phones on your network)
+  const isLocalOrigin = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost' || window.location.hostname.startsWith('192.168.');
+  state.shareTarget = isLocalOrigin ? 'wifi' : 'public';
+  if (dom.shareTargetTabs) {
+    dom.shareTargetTabs.querySelectorAll('.share-target-tab').forEach(t => {
+      t.classList.toggle('active', t.dataset.target === state.shareTarget);
+    });
+  }
+
+  updateShareLinkDisplay();
   dom.shareModal.showModal();
+}
+
+function copyShareLink() {
+  if (!state.messages.length) {
+    showToast('No messages to share.');
+    return;
+  }
+  const url = dom.shareLinkInput && dom.shareLinkInput.value ? dom.shareLinkInput.value : '';
+
+  const triggerCopiedState = () => {
+    showToast('🔗 Short link copied to clipboard!');
+    const btns = [dom.shareCopyLinkBtn, dom.shareActionCopyLinkBtn].filter(Boolean);
+    btns.forEach(btn => {
+      btn.classList.add('copied');
+      const textSpan = btn.querySelector('.copy-btn-text') || btn.querySelector('.action-copy-text') || btn;
+      const oldText = textSpan.textContent;
+      textSpan.textContent = '✓ Copied!';
+      setTimeout(() => {
+        btn.classList.remove('copied');
+        textSpan.textContent = oldText;
+      }, 2200);
+    });
+  };
+
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(url).then(triggerCopiedState).catch(() => {
+      if (dom.shareLinkInput) {
+        dom.shareLinkInput.select();
+        document.execCommand('copy');
+        triggerCopiedState();
+      }
+    });
+  } else if (dom.shareLinkInput) {
+    dom.shareLinkInput.select();
+    document.execCommand('copy');
+    triggerCopiedState();
+  }
+}
+
+function initShareTargetTabs() {
+  if (dom.shareTargetTabs) {
+    dom.shareTargetTabs.addEventListener('click', (e) => {
+      const tab = e.target.closest('.share-target-tab');
+      if (!tab) return;
+      dom.shareTargetTabs.querySelectorAll('.share-target-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      state.shareTarget = tab.dataset.target || 'wifi';
+      updateShareLinkDisplay();
+    });
+  }
 }
 
 function copyShareMarkdown() {
@@ -5805,6 +5990,18 @@ dom.shareBtn.addEventListener('click', openShareModal);
 dom.shareModalClose.addEventListener('click', () => dom.shareModal.close());
 dom.shareCopyMarkdownBtn.addEventListener('click', copyShareMarkdown);
 dom.shareCopyTextBtn.addEventListener('click', copyShareText);
+if (dom.shareCopyLinkBtn) dom.shareCopyLinkBtn.addEventListener('click', copyShareLink);
+if (dom.shareActionCopyLinkBtn) dom.shareActionCopyLinkBtn.addEventListener('click', copyShareLink);
+if (dom.shareToWhatsAppBtn) {
+  dom.shareToWhatsAppBtn.addEventListener('click', () => {
+    const url = dom.shareLinkInput && dom.shareLinkInput.value ? dom.shareLinkInput.value : '';
+    const title = dom.shareChatTitle ? dom.shareChatTitle.textContent : 'ChatAI Conversation';
+    const text = `*ChatAI: ${title}*\n\n🔗 ${url}`;
+    const waUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(text)}`;
+    window.open(waUrl, '_blank');
+    showToast('💬 WhatsApp opened with short link!');
+  });
+}
 
 // File attachment
 dom.attachBtn.addEventListener('click', () => dom.fileInput.click());
@@ -8197,5 +8394,151 @@ window.shareMsg = function(id) {
   initGoogleSeoPortal();
   updateFastModeUI();
   updateFullscreenIcon();
+
+  initShareTargetTabs();
+  fetchNetworkInfo();
+
+  checkSharedUrlHash();
+  window.addEventListener('hashchange', checkSharedUrlHash);
 })();
+
+async function checkSharedUrlHash() {
+  const hash = window.location.hash || '';
+  const searchParams = new URLSearchParams(window.location.search || '');
+
+  // 1. Clean short ID link: #share=c_... or ?share=c_...
+  const matchId = hash.match(/#share=([a-zA-Z0-9_\-]+)/);
+  const idParam = matchId ? matchId[1] : searchParams.get('share');
+
+  if (idParam) {
+    const shareId = idParam;
+    // Check localStorage first
+    try {
+      const registry = JSON.parse(localStorage.getItem('chatai_shared_registry') || '{}');
+      const shared = registry[shareId] || state.allChats.find(c => String(c.id) === String(shareId).replace(/^c_/, ''));
+      if (shared && shared.messages && shared.messages.length) {
+        loadSharedConversation(shared);
+        return true;
+      }
+    } catch (e) {}
+
+    // Fallback: fetch from server /api/share?id=...
+    try {
+      const res = await fetch(`/api/share?id=${encodeURIComponent(shareId)}`);
+      if (res.ok) {
+        const data = await res.json();
+        if (data && data.messages && data.messages.length) {
+          loadSharedConversation(data);
+          return true;
+        }
+      }
+    } catch (err) {
+      console.warn('Could not fetch shared conversation from server:', err);
+    }
+    showToast('⚠️ Could not find this shared chat.');
+    return false;
+  }
+
+  // 2. Also support self-contained #share_data= if someone used it
+  const matchData = hash.match(/#share_data=([A-Za-z0-9_\-]+)/);
+  const dataParam = matchData ? matchData[1] : searchParams.get('share_data');
+  if (dataParam) {
+    try {
+      let base64 = dataParam.replace(/-/g, '+').replace(/_/g, '/');
+      while (base64.length % 4) base64 += '=';
+      const binary = atob(base64);
+      const bytes = new Uint8Array(binary.length);
+      for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i);
+      const json = new TextDecoder().decode(bytes);
+      const parsed = JSON.parse(json);
+      loadSharedConversation({
+        id: Date.now(),
+        title: parsed.t || 'Shared Conversation',
+        messages: (parsed.m || []).map((item, idx) => ({
+          id: Date.now() + idx,
+          role: item[0] === 0 ? 'user' : 'ai',
+          content: item[1],
+          timestamp: Date.now()
+        })),
+        provider: 'pollinations',
+        model: 'openai',
+        createdAt: Date.now()
+      });
+      return true;
+    } catch (e) {}
+  }
+
+  return false;
+}
+
+function loadSharedConversation(shared) {
+  state.currentChatId = shared.chatId || shared.id || Date.now();
+  state.messages = (shared.messages || []).map(m => ({
+    id: m.id || (Date.now() + Math.random()),
+    role: m.role || 'ai',
+    content: m.content || '',
+    attachments: m.attachments || null,
+    sources: m.sources || null,
+    timestamp: m.timestamp || Date.now()
+  }));
+
+  if (dom.messagesList && dom.welcomeScreen) {
+    dom.messagesList.innerHTML = '';
+    dom.welcomeScreen.style.display = 'none';
+    dom.messagesList.style.display  = 'flex';
+
+    // Floating shared conversation banner
+    const banner = document.createElement('div');
+    banner.className = 'shared-chat-banner';
+    banner.id = 'sharedChatBanner';
+    const msgCount = state.messages.length;
+    banner.innerHTML = `
+      <div class="shared-chat-meta">
+        <span class="shared-chat-icon">🔗</span>
+        <div>
+          <div class="shared-chat-title">Shared Conversation: "${escHtml(shared.title || 'ChatAI Conversation')}"</div>
+          <div class="shared-chat-sub">${msgCount} messages snapshot • Read-only preview</div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:8px;">
+        <button type="button" class="shared-chat-save-btn" id="saveSharedChatBtn">💾 Save to My Chats</button>
+        <button type="button" style="background:transparent;border:none;color:var(--text-muted);cursor:pointer;font-size:16px;padding:4px;" title="Dismiss banner" onclick="this.closest('.shared-chat-banner').remove()">✕</button>
+      </div>
+    `;
+    dom.messagesList.appendChild(banner);
+
+    const saveBtn = banner.querySelector('#saveSharedChatBtn');
+    if (saveBtn) {
+      saveBtn.addEventListener('click', () => {
+        const exists = state.allChats.some(c => c.id === state.currentChatId);
+        if (!exists) {
+          state.allChats.unshift({
+            id: state.currentChatId,
+            title: shared.title || 'Shared Conversation',
+            messages: state.messages.map(m => ({ ...m })),
+            provider: shared.provider || state.provider || 'pollinations',
+            model: shared.model || state.apiModel || 'openai',
+            createdAt: Date.now()
+          });
+          saveChats();
+          renderHistorySidebar(state.searchQuery);
+        }
+        saveBtn.textContent = '✓ Saved to Chats!';
+        saveBtn.disabled = true;
+        saveBtn.style.opacity = '0.7';
+        showToast('✓ Conversation saved to your chat history!');
+      });
+    }
+
+    state.messages.forEach(m => {
+      dom.messagesList.insertAdjacentHTML('beforeend',
+        buildMessageHTML(m.role, m.content, m.id, m.attachments, m.edited, m.imageInfo));
+    });
+
+    scrollToBottom();
+    renderHistorySidebar(state.searchQuery);
+    updateChatStats();
+    showToast(`🔗 Opened shared conversation: "${shared.title || 'ChatAI Conversation'}"`);
+  }
+}
 
